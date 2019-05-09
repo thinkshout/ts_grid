@@ -68,7 +68,7 @@
   } @else {
     $position-left: ($total-columns - $centered-columns)/2 + 1;
     $position-right: $position-left + $centered-columns;
-    grid-column: $position-left / $position-right;
+    grid-column: #{$position-left} / #{$position-right};
   }
 }
 
