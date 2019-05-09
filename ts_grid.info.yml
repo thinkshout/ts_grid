@@ -1,10 +1,10 @@
-name: ThinkBase
+name: TS Grid
 type: theme
 description: A base theme for ThinkShout D8 sites
 package: Other
 core: 8.x
 libraries:
-  - thinkbase/thinkbase
+  - ts_grid/ts_grid
 
 base theme: classy
 #Using Classy as a base theme https://www.drupal.org/theme-guide/8/classy

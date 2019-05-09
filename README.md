@@ -1,4 +1,4 @@
-# ThinkBase - Grid
+# TS Grid - Grid
 A base theme for a Drupal 8 site using CSS Grid Layout. 
 Requires Ruby to run locally and the 
 [components](https://www.drupal.org/project/components) module to be added to 
@@ -22,8 +22,8 @@ For a full writeup on this theme see the blog post,
 We customize templates a lot when theming in order to get the markup we need. 
 When doing so, create directories using the same logic applied to the original 
 template. Example: `/core/themes/classy/templates/layout/html.html.twig` becomes
-`/thinkbase/templates/layout/html.html.twig`. Both files are placed in the same 
-`layout` directory, however the thinkbase file is the one being overridden and 
+`/ts_grid/templates/layout/html.html.twig`. Both files are placed in the same 
+`layout` directory, however the ts_grid file is the one being overridden and 
 will ultimately be rendered on the page. 
 
 ## Sass Files and Structure
