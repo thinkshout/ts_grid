@@ -21,7 +21,8 @@
   "scripts": {
     "build": "webpack --config webpack.config.js",
     "build:dev": "webpack --config webpack.config.js --mode development",
-    "start:dev": "webpack-dev-server"
+    "start": "webpack-dev-server --mode production",
+    "start:dev": "webpack-dev-server --mode development"
   },
   "author": "ThinkShout, Inc",
   "license": "GPL-3.0"
