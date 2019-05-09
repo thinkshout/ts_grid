@@ -9,9 +9,11 @@ the project build.
 
 - Run `npm install` to install dependencies.
 - Run `npm run build` to run the production build.
-- Run `npm run build:dev` to run the development build.
+- Run `npm run build:dev` to run the development build. Do not commit changes
+  from development mode!
 - Run `npm run start` to watch for changes and build.
 - Run `npm run start:dev` to watch for changes and build in development mode.
+  Do not commit changes from development mode!
 - Run `npm run prettier` to fix styling errors in js/scss files. This is ran
   automatically if you commit files while inside the theme directory.
 
