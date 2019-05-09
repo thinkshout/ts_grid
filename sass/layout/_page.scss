@@ -60,11 +60,11 @@ body {
 // element to stretch the full width of the site.
 .container {
   margin: 0 auto;
-  max-width: $grid-max-width + ($grid-gutter*2);
+  max-width: $grid-max-width + ($grid-gutter * 2);
   overflow-x: hidden;
 
   @include mq($xxl) {
-    max-width: $grid-max-width-xxl + ($grid-gutter*2);
+    max-width: $grid-max-width-xxl + ($grid-gutter * 2);
   }
 }
 

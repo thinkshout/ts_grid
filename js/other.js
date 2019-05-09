@@ -7,17 +7,15 @@
  * could lead to performance benefits since less JS is sent to the client.
  */
 
-import { sayGoodbye } from './utils.js';
+import { sayGoodbye } from "./utils.js";
 
 (($, Drupal) => {
-
   /**
    * This example behavior shows a lot of the new useful syntax in ES6.
    */
   Drupal.behaviors.tsGridOtherExample = {
     attach(context, setings) {
-      console.log(sayGoodbye('ThinkShout'));
-    },
+      console.log(sayGoodbye("ThinkShout"));
+    }
   };
-
 })(jQuery, Drupal);
