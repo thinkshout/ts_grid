@@ -4,9 +4,9 @@
   "description": "CSS Grid Layout with Webpack",
   "dependencies": {},
   "devDependencies": {
-    "autoprefixer": "^9.5.1",
     "@babel/core": "^7.4.4",
     "@babel/preset-env": "^7.4.4",
+    "autoprefixer": "^9.5.1",
     "babel-loader": "^8.0.5",
     "css-loader": "^2.1.1",
     "mini-css-extract-plugin": "^0.6.0",
