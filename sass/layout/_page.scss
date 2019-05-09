@@ -15,14 +15,14 @@ body {
   display: grid;
   grid-column-gap: $grid-gutter;
   grid-template-columns: repeat($grid-columns-mobile, 1fr);
-  -ms-grid-columns: repeat($grid-columns, 1fr); // For IE
+  grid-template-rows: auto;
   margin: 0 auto;
   max-width: calc(100% - (#{$grid-gutter} * 2));
   width: $grid-max-width;
 
   @include mq($ph) {
     grid-template-columns: repeat($grid-columns, 1fr);
-    -ms-grid-columns: repeat($grid-columns, 1fr); // For IE
+    grid-template-rows: auto;
   }
 
   @include mq($xxl) {

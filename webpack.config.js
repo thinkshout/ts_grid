@@ -36,19 +36,12 @@ module.exports = {
 						}
 					},
 					{
+						loader: 'postcss-loader'
+					},
+					{
 						loader: 'sass-loader',
 						options: {
 							importer: globImporter()
-						}
-					},
-					{
-						loader: 'postcss-loader',
-						options: {
-							plugins: [
-								autoprefixer({
-									browsers: ['last 3 versions', '> 1%']
-								})
-							]
 						}
 					}
 				]
