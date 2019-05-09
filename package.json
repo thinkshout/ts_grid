@@ -25,8 +25,8 @@
   "scripts": {
     "build": "webpack --config webpack.config.js",
     "build:dev": "webpack --config webpack.config.js --mode development",
-    "start": "webpack-dev-server --mode production",
-    "start:dev": "webpack-dev-server --mode development",
+    "start": "webpack --watch",
+    "start:dev": "webpack --watch --mode development",
     "pretty-quick": "pretty-quick",
     "prettier": "prettier --write sass/**/*.scss js/**/*.js"
   },

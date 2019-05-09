@@ -46,7 +46,7 @@ body {
  */
 /* LAYOUT */
 html {
-  background-color: #EDEDED; }
+  background-color: #ededed; }
 
 body {
   background-color: #ffffff;
@@ -56,17 +56,74 @@ body {
   position: relative; }
 
 .grid {
+  display: -ms-grid;
   display: grid;
   grid-column-gap: 25px;
+  -ms-grid-columns: 1fr 25px 1fr 25px 1fr 25px 1fr;
   grid-template-columns: repeat(4, 1fr);
-  -ms-grid-columns: repeat(12, 1fr);
+  -ms-grid-rows: auto;
+  grid-template-rows: auto;
   margin: 0 auto;
   max-width: calc(100% - (25px * 2));
   width: 1260px; }
+
+.grid > *:nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1; }
+
+.grid > *:nth-child(2) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3; }
+
+.grid > *:nth-child(3) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 5; }
+
+.grid > *:nth-child(4) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 7; }
   @media (min-width: 31.3125rem) {
     .grid {
+      -ms-grid-columns: (1fr)[12];
       grid-template-columns: repeat(12, 1fr);
-      -ms-grid-columns: repeat(12, 1fr); } }
+      -ms-grid-rows: auto;
+      grid-template-rows: auto; }
+    .grid > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1; }
+    .grid > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2; }
+    .grid > *:nth-child(3) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3; }
+    .grid > *:nth-child(4) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 4; }
+    .grid > *:nth-child(5) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 5; }
+    .grid > *:nth-child(6) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 6; }
+    .grid > *:nth-child(7) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 7; }
+    .grid > *:nth-child(8) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 8; }
+    .grid > *:nth-child(9) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 9; }
+    .grid > *:nth-child(10) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 10; }
+    .grid > *:nth-child(11) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 11; }
+    .grid > *:nth-child(12) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 12; } }
   @media (min-width: 125rem) {
     .grid {
       width: 1575px; } }
@@ -75,6 +132,7 @@ body {
 
 #grid-checker {
   background: transparent;
+  display: -ms-grid;
   display: grid;
   grid-auto-rows: minmax(100%, auto);
   left: 0;
