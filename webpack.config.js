@@ -1,11 +1,23 @@
 const globImporter = require('node-sass-glob-importer');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
+const autoprefixer = require("autoprefixer");
 
 module.exports = {
 	mode: 'production',
 	entry: {
 		main: ['./js/main.js', './sass/style.scss'],
+	},
+	devServer: {
+		proxy: {
+			changeOrigin: true,
+			publicPath: '/themes/custom/ts_grid/dist',
+			context: () => true,
+			target: 'http://web.grid.localhost'
+		},
+		compress: true,
+		port: 1234,
+		writeToDisk: true
 	},
 	module: {
 		rules: [
@@ -27,6 +39,16 @@ module.exports = {
 						loader: 'sass-loader',
 						options: {
 							importer: globImporter()
+						}
+					},
+					{
+						loader: 'postcss-loader',
+						options: {
+							plugins: [
+								autoprefixer({
+									browsers: ['last 3 versions', '> 1%']
+								})
+							]
 						}
 					}
 				]
