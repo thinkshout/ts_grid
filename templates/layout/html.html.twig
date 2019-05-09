@@ -60,10 +60,5 @@
     {{ page }}
     {{ page_bottom }}
     <js-bottom-placeholder token="{{ placeholder_token|raw }}">
-    {% if url('<current>') starts with 'http://localhost:3000' %}
-      <script id="__bs_script__">//<![CDATA[
-        document.write("<script async src='http://HOST:3000/browser-sync/browser-sync-client.js?v=2.23.5'><\/script>".replace("HOST", location.hostname));
-        //]]></script>
-    {% endif %}
   </body>
 </html>

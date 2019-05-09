@@ -4,7 +4,7 @@ description: A base theme for ThinkShout D8 sites
 package: Other
 core: 8.x
 libraries:
-  - ts_grid/ts_grid
+  - ts_grid/main
 
 base theme: classy
 #Using Classy as a base theme https://www.drupal.org/theme-guide/8/classy

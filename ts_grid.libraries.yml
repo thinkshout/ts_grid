@@ -1,4 +1,4 @@
-ts_grid:
+main:
   version: VERSION
   css:
     theme:
