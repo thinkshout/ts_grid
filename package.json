@@ -1,0 +1,17 @@
+{
+  "name": "thinkbase",
+  "version": "1.0.0",
+  "description": "## Setup - Update `Rakefile` to have the correct theme - Run `rake install` to install dependencies",
+  "main": "main.js",
+  "dependencies": {},
+  "devDependencies": {
+    "autoprefixer": "^9.4.9",
+    "jquery": "^3.3.1",
+    "postcss-cli": "^6.1.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ThinkShout, Inc",
+  "license": "GPL-3.0"
+}

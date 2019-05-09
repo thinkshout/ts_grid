@@ -1,0 +1,106 @@
+//GLOBAL PARAGRAPH PADDING SETTINGS
+//
+// The logic in this file is as such:
+// There are three kinds of block-level items. All sizes here listed for desktop:
+// Unfriendly: Items that should appear $padding-vertical-[breakpoint] apart from each other
+// Friendly: The last item in a Friendly block should have $grid-gutter-[breakpoint], and that's how far two
+// Friendly blocks should be from each other.
+// Lovey: Items that should appear 0 rems apart from each other
+//
+// Lovey blocks provide no bottom padding -- they want other Lovey blocks to snuggle right up against them.
+//
+// Friendly also have no bottom padding -- the assumption is that the last element within this block will provide a
+// bottom padding equal to the gutter width of the grid.
+//
+// Unfriendly blocks provide a large amount of bottom padding -- they have a personal bubble and want it obeyed.
+//
+// Except for Unfriendly blocks, the rules above only apply when like follows like (Lovey + Lovey, Friendly + Friendly).
+//
+// If Lovey follows anything that ISN'T Lovey, Lovey provides enough top padding to equal $padding-vertical-[breakpoint]
+// top padding. Lovey loves other blocks, but it also wants them to be comfortable.
+//
+// If Friendly follows anything that ISN'T Friendly, Friendly provides enough top padding to equal
+// $padding-vertical-[breakpoint] for the same reason.
+//
+// If Unfriendly follows anything that ISN'T Unfriendly, it also provides the $padding-vertical-[breakpoint] top padding
+// to keep itself comfortable. It doesn't need to apply padding if it follows another Unfriendly block - the first block
+// adds the correct amount of bottom padding instead.
+//
+
+//
+// Start of Unfriendly blocks:
+//
+// These blocks should always be $padding-vertical-[breakpoint].
+//
+.unfriendly-block {
+  padding-bottom: $padding-vertical;
+
+  // Unfriendly blocks following Friendly blocks.
+  .friendly-block + & {
+    padding-top: $padding-vertical - $grid-gutter;
+  }
+
+  // Unfriendly blocks following Lovey blocks.
+  .lovey-block + & {
+    padding-top: $padding-vertical;
+  }
+
+  // This paragraph type provides $grid-gutter-xl padding on its child items.
+  &.paragraph--type-related-posts,
+  &.paragraph--type-related-resources {
+    padding-bottom: 0;
+  }
+}
+
+//
+// Start of Friendly blocks:
+//
+// Items that pretend to be one item, so padding is set by the inner elements.
+// Useful for things that appear in multiple columns on desktop, but in a
+// single column on mobile, like card views.
+//
+.friendly-block {
+  // The margin-bottom needs to match the grid gutters.
+  margin-bottom: $grid-gutter;
+
+  // Friendly blocks following Lovey blocks.
+  .lovey-block + & {
+    margin-top: $padding-vertical;
+  }
+}
+
+//
+// Start of Lovey blocks:
+//
+.lovey-block {
+  padding-bottom: 0;
+
+  //Lovey blocks following unfriendly blocks
+  .friendly-block + & {
+    margin-top: $padding-vertical;
+  }
+}
+
+//Removes bottom margin or padding from the last paragraph in the series
+.friendly-block:nth-last-of-type(1) {
+  margin-bottom: $padding-vertical;
+}
+
+
+//Applies consistent padding
+//Use classes whenever possible
+.padding-top,
+%padding-top {
+  padding-top: $padding-vertical;
+}
+
+.padding-bottom,
+%padding-bottom {
+  padding-bottom: $padding-vertical;
+}
+
+.padding-vertical,
+%padding-vertical {
+  @extend %padding-top;
+  @extend %padding-bottom;
+}

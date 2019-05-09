@@ -1,0 +1,36 @@
+thinkbase.small:
+  label: Small
+  mediaQuery: '(min-width: 0px) and (max-width: 500px)'
+  weight: 0
+  multipliers:
+    - 1x
+thinkbase.phablet:
+  label: Phablet
+  mediaQuery: '(min-width: 501px) and (max-width: 768px)'
+  weight: 1
+  multipliers:
+    - 1x
+thinkbase.medium:
+  label: Medium
+  mediaQuery: '(min-width: 769px) and (max-width: 1024px)'
+  weight: 1
+  multipliers:
+    - 1x
+thinkbase.large:
+  label: Large
+  mediaQuery: '(min-width: 1025px) and (max-width: 1441px)'
+  weight: 2
+  multipliers:
+    - 1x
+thinkbase.xlarge:
+  label: XLarge
+  mediaQuery: '(min-width: 1442px) and (max-width: 1999px)'
+  weight: 3
+  multipliers:
+    - 1x
+thinkbase.xxlarge:
+  label: XXLarge
+  mediaQuery: '(min-width: 2000px)'
+  weight: 4
+  multipliers:
+    - 1x
