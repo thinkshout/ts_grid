@@ -3,7 +3,6 @@
  * MIXINS - See theme Readme for more details.
  */
 
-
 /* MEDIA QUERIES */
 @mixin mq($query) {
   @media (min-width: rem($query)) {
@@ -11,39 +10,41 @@
   }
 }
 
-
 /* PX TO REM CONVERSION */
 @function rem($pixels, $context: $base-font-size) {
-  @if (unitless($pixels)) { $pixels: $pixels * 1px; }
-  @if (unitless($context)) { $context: $context * 1px; }
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
   @return $pixels / $context * 1rem;
 }
-
 
 /* FONTS */
 
 // Font styles - ToDo: Add project fonts.
-@mixin font($family, $weight: 'normal', $style: 'normal') {
+@mixin font($family, $weight: "normal", $style: "normal") {
   font-family: $family, sans-serif;
 
-  @if ($weight == 'black') {
+  @if ($weight == "black") {
     font-weight: 900;
-  } @else if ($weight == 'bold') {
+  } @else if ($weight == "bold") {
     font-weight: 700;
-  } @else if ($weight == 'semibold') {
+  } @else if ($weight == "semibold") {
     font-weight: 600;
-  } @else if ($weight == 'medium') {
+  } @else if ($weight == "medium") {
     font-weight: 500;
-  } @else if ($weight == 'regular') or ($weight == 'italic'){
+  } @else if ($weight == "regular") or ($weight == "italic") {
     font-weight: 400;
-  } @else if($weight == 'book') {
+  } @else if($weight == "book") {
     font-weight: 300;
-  } @else if($weight == 'light') {
+  } @else if($weight == "light") {
     font-weight: 200;
   }
 
   // Set italic style
-  @if ($style == 'italic') {
+  @if ($style == "italic") {
     font-style: italic;
   }
 }
@@ -58,12 +59,11 @@
   line-height: ($line-height / $font-size);
 }
 
-
 /* GRID */
 
 // Centers a column on the page
 @mixin center-columns($centered-columns, $total-columns) {
-  @if($total-columns - $centered-columns == 0) {
+  @if ($total-columns - $centered-columns == 0) {
     grid-column: 1 / calc(#{$total-columns} + 1);
   } @else {
     $position-left: ($total-columns - $centered-columns)/2 + 1;
@@ -78,18 +78,26 @@
   @if ($half == false) {
     @if ($minus == false) {
       margin-#{$side}: $grid-gutter;
-      @include mq($ph) { margin-#{$side}: $grid-gutter; }
+      @include mq($ph) {
+        margin-#{$side}: $grid-gutter;
+      }
     } @else {
       margin-#{$side}: $grid-gutter;
-      @include mq($ph) { margin-#{$side}: ($grid-gutter * -1); }
+      @include mq($ph) {
+        margin-#{$side}: ($grid-gutter * -1);
+      }
     }
   } @else {
     @if ($minus == false) {
       margin-#{$side}: ($grid-gutter / 2);
-      @include mq($ph) { margin-#{$side}: ($grid-gutter / 2); }
+      @include mq($ph) {
+        margin-#{$side}: ($grid-gutter / 2);
+      }
     } @else {
       margin-#{$side}: (($grid-gutter / 2) * -1);
-      @include mq($ph) { margin-#{$side}: (($grid-gutter / 2) * -1); }
+      @include mq($ph) {
+        margin-#{$side}: (($grid-gutter / 2) * -1);
+      }
     }
   }
 }
@@ -97,10 +105,10 @@
 // Gutter spacing w/ Grid
 @mixin grid-equal-items($items-in-row) {
   @if ($items-in-row == 2) {
-    $percent: calc(50% - (#{$grid-gutter}/2));
+    $percent: calc(50% - (#{$grid-gutter}/ 2));
     grid-template-columns: $percent $percent;
   } @else if ($items-in-row == 3) {
-    $percent: calc(33.33% - (#{$grid-gutter}/1.5));
+    $percent: calc(33.33% - (#{$grid-gutter}/ 1.5));
     grid-template-columns: $percent $percent $percent;
   } @else if ($items-in-row == 4) {
     $percent: calc(25% - #{$grid-gutter});
@@ -109,7 +117,6 @@
     grid-template-columns: $percent;
   }
 }
-
 
 /* FLEXBOX */
 
@@ -120,7 +127,7 @@
 // In the case of left-aligned final row items, use grid-equal-items() above.
 //
 // flex-basis will need to be added to the items themselves. Ex. 25% for 4 across.
-@mixin flex-grid-wrapper($justify: center,$bp-start: $sm) {
+@mixin flex-grid-wrapper($justify: center, $bp-start: $sm) {
   @include margin-gutter(left, half, minus);
   @include margin-gutter(right, half, minus);
   @include mq($bp-start) {
@@ -158,15 +165,17 @@
 }
 
 // Each argument is items per row in each breakpoint
-@mixin flex-grid-item($sm-num: 1, $ph-num: 2, $md-num: 3, $sl-num: 3, $lg-num: 4, $xl-num: 4, $xxl-num: 4) {
-
-  $breakpoints:
-      ($sm, $sm-num),
-      ($ph, $ph-num),
-      ($md, $md-num),
-      ($lg, $lg-num),
-      ($xl, $xl-num),
-      ($xxl, $xxl-num);
+@mixin flex-grid-item(
+  $sm-num: 1,
+  $ph-num: 2,
+  $md-num: 3,
+  $sl-num: 3,
+  $lg-num: 4,
+  $xl-num: 4,
+  $xxl-num: 4
+) {
+  $breakpoints: ($sm, $sm-num), ($ph, $ph-num), ($md, $md-num), ($lg, $lg-num),
+    ($xl, $xl-num), ($xxl, $xxl-num);
 
   // Default styles
   @include padding-gutter(left, half);
@@ -183,7 +192,6 @@
   }
   @content;
 }
-
 
 /* DECORATIVE ELEMENTS */
 
@@ -208,22 +216,21 @@
 
 // Transparent at the top.
 @mixin hero_bottom_gradient($direction: to top, $color: $black) {
-  background: transparent linear-gradient($direction,
-    rgba($color, 1) 0%,
-    rgba($color, 0.0) 30%
-  );
+  background: transparent
+    linear-gradient($direction, rgba($color, 1) 0%, rgba($color, 0) 30%);
   @include mq($md) {
-    background: transparent linear-gradient($direction,
-      rgba($color, 1) 0%,
-      rgba($color, 0.9) 10%,
-      rgba($color, 0.8) 20%,
-      rgba($color, 0.6) 35%,
-      rgba($color, 0.2) 60%,
-      rgba($color, 0.0) 100%
-    );
+    background: transparent
+      linear-gradient(
+        $direction,
+        rgba($color, 1) 0%,
+        rgba($color, 0.9) 10%,
+        rgba($color, 0.8) 20%,
+        rgba($color, 0.6) 35%,
+        rgba($color, 0.2) 60%,
+        rgba($color, 0) 100%
+      );
   }
 }
-
 
 /* UTILITIES */
 
@@ -263,6 +270,5 @@
   border-radius: 0;
   box-shadow: none;
 }
-
 
 /* UNIQUE TO PROJECT */

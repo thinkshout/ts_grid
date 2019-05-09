@@ -8,15 +8,13 @@
 $black: #000000;
 $white: #ffffff;
 
-$light-grey: #EDEDED; // Color used in the side margins when viewing on xxl screens.
+$light-grey: #ededed; // Color used in the side margins when viewing on xxl screens.
 $light-gray: $light-grey;
-
 
 /* FONTS */
 
 // Base Font Size
 $base-font-size: 16;
-
 
 /* BREAKPOINTS */
 
@@ -33,7 +31,6 @@ $xl: 1442px;
 // Double Extra large screens / wide monitor
 $xxl: 2000px;
 
-
 /* GRID */
 $grid-max-width: 1260px; // Where the content begins and ends for desktops.
 $grid-max-width-xxl: 1575px; // Where the content begins and ends for xl screens.
@@ -45,7 +42,6 @@ $grid-gutter-double: $grid-gutter * 2;
 
 $grid-columns-mobile: 4;
 $grid-columns: 12;
-
 
 /* MISC. */
 
