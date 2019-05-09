@@ -2,6 +2,6 @@ ts_grid:
   version: VERSION
   css:
     theme:
-      css/style.prefixed.css: {}
+      dist/main.css: {}
   js:
-    js/main-dist.js: {}
+    dist/main.min.js: {}
