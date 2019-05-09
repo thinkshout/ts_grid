@@ -2,6 +2,7 @@ const globImporter = require('node-sass-glob-importer');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
 const autoprefixer = require("autoprefixer");
+const argv = require('minimist')(process.argv.slice(2));
 
 module.exports = {
 	mode: 'production',
@@ -13,7 +14,7 @@ module.exports = {
 			changeOrigin: true,
 			publicPath: '/themes/custom/ts_grid/dist',
 			context: () => true,
-			target: 'http://web.grid.localhost'
+			target: argv.proxy || 'http://web.grid.localhost'
 		},
 		compress: true,
 		port: 1234,
