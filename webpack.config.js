@@ -1,7 +1,6 @@
 const globImporter = require("node-sass-glob-importer");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const path = require("path");
-const argv = require("minimist")(process.argv.slice(2));
 
 module.exports = {
   mode: "production",
