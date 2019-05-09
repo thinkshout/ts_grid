@@ -12,11 +12,11 @@ https://github.com/thinkshout/ts_grid/wiki
 
 - Run `npm install` to install dependencies.
 - Run `npm run build` to run the production build.
-- Run `npm run build:dev` to run the development build.
-- Run `npm run start -- --proxy=http://drupal.localhost/` to start a
-  development server, where `drupal.localhost` is the domain of your local site.
-- Run `npm run start:dev` to run a development server using the development
-  webpack mode.
+- Run `npm run build:dev` to run the development build. Do not commit changes
+  from development mode!
+- Run `npm run start` to watch for changes and build.
+- Run `npm run start:dev` to watch for changes and build in development mode.
+  Do not commit changes from development mode!
 - Run `npm run prettier` to fix styling errors in js/scss files. This is ran
   automatically if you commit files while inside the theme directory.
 
