@@ -5,3 +5,8 @@ ts_grid:
       dist/main.css: {}
   js:
     dist/main.min.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupalSettings
+    - core/jquery.once

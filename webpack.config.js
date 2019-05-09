@@ -52,8 +52,22 @@ module.exports = {
 						}
 					}
 				]
-			}
-		],
+			},
+      {
+        include: path.resolve(__dirname, 'js/utils.js'),
+        sideEffects: false,
+      },
+      {
+        test: /\.js$/,
+        exclude: /(node_modules|bower_components)/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: [['@babel/preset-env', {modules: false}]]
+          }
+        }
+      },
+    ],
 	},
 	output: {
 		path: path.resolve(__dirname, "dist"),
@@ -62,5 +76,8 @@ module.exports = {
 	},
 	plugins: [
 		new MiniCssExtractPlugin()
-	]
+	],
+  optimization: {
+    usedExports: true
+  }
 };
