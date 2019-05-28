@@ -1,9 +1,9 @@
 # TS Grid - Grid
 
 A base theme for a Drupal 8 site using CSS Grid Layout, Webpack, and JS ES6.
-Requires Ruby to run locally and the
+Requires
 [components](https://www.drupal.org/project/components) module to be added to
-the project build.
+the project build for the visual grid checker to be useful.
 
 Check out the Wiki to learn more about this theme:
 https://github.com/thinkshout/ts_grid/wiki
