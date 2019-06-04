@@ -61,6 +61,7 @@ module.exports = (env, argv) => {
     plugins: [
       new MiniCssExtractPlugin(),
       new LiveReloadPlugin({
+        protocol: 'http',
         appendScriptTag: argv.mode === "development"
       })
     ],
