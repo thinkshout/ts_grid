@@ -9,6 +9,7 @@ module.exports = (env, argv) => {
     entry: {
       main: ["./js/main.js", "./sass/style.scss"]
     },
+    devtool: argv.mode === "development" ? "source-map" : false,
     module: {
       rules: [
         {
@@ -20,19 +21,23 @@ module.exports = (env, argv) => {
             {
               loader: "css-loader",
               options: {
-                sourceMap: true,
+                sourceMap: argv.mode === "development",
                 modules: false,
                 localIdentName: "[local]___[hash:base64:5]",
                 url: false
               }
             },
             {
-              loader: "postcss-loader"
+              loader: "postcss-loader",
+              options: {
+                sourceMap: argv.mode === "development"
+              }
             },
             {
               loader: "sass-loader",
               options: {
-                importer: globImporter()
+                importer: globImporter(),
+                sourceMap: argv.mode === "development"
               }
             }
           ]
