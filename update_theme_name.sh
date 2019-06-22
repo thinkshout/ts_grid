@@ -65,10 +65,8 @@
   sed "s/ts_grid_/${THEME_NAME}_/g" $THEME_DEST/ts_grid.theme >$THEME_DEST/$THEME_NAME.theme
   rm $THEME_DEST/ts_grid.theme
 
-  sed "s/name: ts_grid/name: ${THEME_NAME}/g" $THEME_DEST/ts_grid.info.yml | \
-  sed "s/ts_grid/${THEME_NAME}/g" | \
-  sed "s/${OLD_HUMAN_READABLE_NAME}/${NEW_HUMAN_READABLE_NAME}/g" \
-  >$THEME_DEST/$THEME_NAME.info.yml
+  sed "s/name: TS Grid/name: ${NEW_HUMAN_READABLE_NAME}/g" $THEME_DEST/ts_grid.info.yml | \
+  sed "s/ts_grid/${THEME_NAME}/g" >$THEME_DEST/$THEME_NAME.info.yml
   rm $THEME_DEST/ts_grid.info.yml
 
   sed "s/ts_grid/${THEME_NAME}/g" $THEME_DEST/ts_grid.yml >$THEME_DEST/$THEME_NAME.yml
