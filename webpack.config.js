@@ -1,7 +1,6 @@
 const globImporter = require("node-sass-glob-importer");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const path = require("path");
-const LiveReloadPlugin = require("webpack-livereload-plugin");
 const BrowserSyncPlugin = require("browser-sync-webpack-plugin");
 
 module.exports = (env, argv) => {
@@ -66,15 +65,11 @@ module.exports = (env, argv) => {
     },
     plugins: [
       new MiniCssExtractPlugin(),
-      new LiveReloadPlugin({
-        protocol: "http",
-        appendScriptTag: argv.mode === "development"
-      }),
       new BrowserSyncPlugin({
         host: "localhost",
         port: 3000,
         // Replace proxy url with your local.
-        proxy: "http://web.ts_grid.localhost/"
+        proxy: "http://web.grid.localhost/"
       })
     ],
     optimization: {
