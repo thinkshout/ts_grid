@@ -8,6 +8,8 @@
     "@babel/preset-env": "^7.4.4",
     "autoprefixer": "^9.5.1",
     "babel-loader": "^8.0.5",
+    "browser-sync": "^2.26.7",
+    "browser-sync-webpack-plugin": "^2.2.2",
     "css-loader": "^2.1.1",
     "husky": "^2.2.0",
     "mini-css-extract-plugin": "^0.6.0",
