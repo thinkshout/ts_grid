@@ -31,7 +31,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run build --staged && pretty-quick --staged && npm run build:dev --no-restage"
+      "pre-commit": "npm run build --staged && pretty-quick --staged"
     }
   },
   "author": "ThinkShout, Inc",
