@@ -33,7 +33,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run build && pretty-quick --staged"
+      "pre-commit": "npm run build --staged && pretty-quick --staged"
     }
   },
   "author": "ThinkShout, Inc",
