@@ -1,5 +1,5 @@
 {
-  "name": "ts_grid",
+  "name": "tsg_test",
   "version": "1.0.0",
   "description": "CSS Grid Layout with Webpack",
   "dependencies": {},
@@ -31,7 +31,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "pretty-quick --staged"
+      "pre-commit": "npm run build --staged && pretty-quick --staged",
+      "post-recieve": "npm run build:dev"
     }
   },
   "author": "ThinkShout, Inc",
