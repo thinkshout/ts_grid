@@ -4,6 +4,7 @@
  */
 // You can import a default behavior to distinguish blocks of code from each
 // other. Here's an example of how to add the accessible card link component.
+// See wiki: https://github.com/thinkshout/ts_grid/wiki/Accessibility#making-accessible-clickable-cards
 import tsCardLink from "./components/ts_card_link.js";
 
 // You can use imports with aliases now!
