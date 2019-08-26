@@ -2,6 +2,10 @@
  * @file
  * Main theme behaviors.
  */
+// You can import a default behavior to distinguish blocks of code from each
+// other. Here's an example of how to add the accessible card link component.
+// See wiki: https://github.com/thinkshout/ts_grid/wiki/Accessibility#making-accessible-clickable-cards
+import tsCardLink from "./components/ts_card_link.js";
 
 // You can use imports with aliases now!
 // Webpack also uses tree shaking here, meaning only sayHello will be imported.
@@ -9,12 +13,19 @@ import { sayHello as sH } from "./utils.js";
 
 (($, Drupal) => {
   /**
+   * This calls the tsCardLink behavior into the main.js global file.
+   **/
+  Drupal.behaviors.tsCardLink = {
+    attach: tsCardLink
+  };
+
+  /**
    * This example behavior shows a lot of the new useful syntax in ES6.
    */
   Drupal.behaviors.tsGridES6Example = {
     // You can use this short syntax for object literals, instead of:
     // attach: function [...]
-    attach(context, setings) {
+    attach(context, settings) {
       // Use "const" for variables that can not be changed or re-assigned.
       const exampleArray = ["foo", "bar", "baz"];
       // Use arrow functions wherever possible to avoid "this" confusion.
