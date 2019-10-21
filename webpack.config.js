@@ -4,12 +4,13 @@ const path = require("path");
 const BrowserSyncPlugin = require("browser-sync-webpack-plugin");
 
 module.exports = (env, argv) => {
+  const isDevMode = argv.mode === "development";
   return {
-    mode: "production",
+    mode: isDevMode ? "development" : "production",
+    devtool: isDevMode ? "source-map" : false,
     entry: {
       main: ["./js/main.js", "./sass/style.scss"]
     },
-    devtool: argv.mode === "development" ? "source-map" : false,
     module: {
       rules: [
         {
@@ -21,30 +22,25 @@ module.exports = (env, argv) => {
             {
               loader: "css-loader",
               options: {
-                sourceMap: argv.mode === "development",
+                sourceMap: true,
                 modules: false,
-                localIdentName: "[local]___[hash:base64:5]",
-                url: false
+                localIdentName: "[local]___[hash:base64:5]"
               }
             },
             {
               loader: "postcss-loader",
               options: {
-                sourceMap: argv.mode === "development"
+                sourceMap: true
               }
             },
             {
               loader: "sass-loader",
               options: {
                 importer: globImporter(),
-                sourceMap: argv.mode === "development"
+                sourceMap: true,
               }
             }
           ]
-        },
-        {
-          include: path.resolve(__dirname, "js/utils.js"),
-          sideEffects: false
         },
         {
           test: /\.js$/,
@@ -59,7 +55,7 @@ module.exports = (env, argv) => {
       ]
     },
     output: {
-      path: path.resolve(__dirname, "dist"),
+      path: isDevMode ? path.resolve(__dirname, "dist_dev") : path.resolve(__dirname, "dist"),
       filename: "[name].min.js",
       publicPath: "/assets/"
     },
@@ -71,9 +67,6 @@ module.exports = (env, argv) => {
         // Replace proxy url with your local.
         proxy: "http://web.grid.localhost/"
       })
-    ],
-    optimization: {
-      usedExports: true
-    }
+    ]
   };
 };

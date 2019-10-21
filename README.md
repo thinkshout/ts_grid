@@ -17,9 +17,12 @@ https://github.com/thinkshout/ts_grid/wiki
 - Run `npm run start` to watch for changes and build.
 - Run `npm run start:dev` to watch for changes and build in development mode.
   In this mode, your local site should automatically refresh when files change.
-  **Note: Do not commit changes from development mode! Commit changes from `npm run build` instead.**
 - Run `npm run prettier` to fix styling errors in js/scss files. This is ran
   automatically if you commit files while inside the theme directory.
+  
+Note: `*:dev` command output is written to `dist_dev`, which cannot be
+committed. To commit your work in `dist`, run `npm run build` or
+`npm run start`, then commit your changes.
 
 ## Javascript compilation
 
