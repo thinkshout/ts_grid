@@ -163,3 +163,14 @@ function ts_grid_theme_suggestions_details_alter(array &$suggestions, array $var
 function ts_grid_preprocess_menu_local_task(array &$variables) {
 
 }
+
+/**
+ * Implements hook_page_attachments_alter().
+ */
+function ts_grid_example_page_attachments_alter(array &$attachments) {
+  // Use the dev library if we're developing locally.
+  if (in_array('ts_grid/main', $attachments['#attached']['library']) && file_exists(__DIR__ . '/dist_dev')) {
+    $index = array_search('ts_grid/main', $attachments['#attached']['library']);
+    $attachments['#attached']['library'][$index] = 'ts_grid/dev';
+  }
+}

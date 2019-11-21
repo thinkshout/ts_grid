@@ -10,3 +10,16 @@ main:
     - core/drupal
     - core/drupalSettings
     - core/jquery.once
+
+dev:
+  version: VERSION
+  css:
+    theme:
+      dist_dev/main.css: {}
+  js:
+    dist_dev/main.min.js: {}
+  dependencies:
+  - core/jquery
+  - core/drupal
+  - core/drupalSettings
+  - core/jquery.once
