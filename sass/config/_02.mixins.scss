@@ -35,16 +35,16 @@
     font-weight: 600;
   } @else if ($weight == "medium") {
     font-weight: 500;
-  } @else if ($weight == "regular") or ($weight == "italic") {
+  } @else if ($weight == "regular") or ($weight == "book") or ($weight == "italic") {
     font-weight: 400;
-  } @else if($weight == "book") {
+  } @else if ($weight == "light") {
     font-weight: 300;
-  } @else if($weight == "light") {
+  } @else if ($weight == "extralight") {
     font-weight: 200;
   }
 
   // Set italic style
-  @if ($style == "italic") {
+  @if ($style == "italic") or ($weight == "italic") {
     font-style: italic;
   }
 }
