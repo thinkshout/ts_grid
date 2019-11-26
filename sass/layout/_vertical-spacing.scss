@@ -1,5 +1,6 @@
 //GLOBAL PARAGRAPH PADDING SETTINGS
 //
+// See the wiki for more details: https://github.com/thinkshout/ts_grid/wiki/Vertical-Spacing
 // The logic in this file is as such:
 // There are three kinds of block-level items. All sizes here listed for desktop:
 // Unfriendly: Items that should appear $padding-vertical-[breakpoint] apart from each other
@@ -43,12 +44,6 @@
   // Unfriendly blocks following Lovey blocks.
   .lovey-block + & {
     padding-top: $padding-vertical;
-  }
-
-  // This paragraph type provides $grid-gutter-xl padding on its child items.
-  &.paragraph--type-related-posts,
-  &.paragraph--type-related-resources {
-    padding-bottom: 0;
   }
 }
 
