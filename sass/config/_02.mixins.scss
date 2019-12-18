@@ -61,6 +61,11 @@
 
 /* GRID */
 
+//Grid Browser Compliance (requires parent element with `.grid`)
+@mixin column-width($start, $end) {
+  grid-column: #{$start} / #{$end};
+}
+
 // Centers a column on the page
 @mixin center-columns($centered-columns, $total-columns) {
   @if ($total-columns - $centered-columns == 0) {
