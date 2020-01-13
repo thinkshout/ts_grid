@@ -1,6 +1,7 @@
 <header>
   {% if page.primary_nav %}
     {{ page.primary_nav }}
+    {% include '@ts_custom/ts-hamburger-nav.html.twig' %}
   {% endif %}
 
   {% if page.secondary_nav %}

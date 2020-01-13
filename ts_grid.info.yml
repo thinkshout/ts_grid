@@ -10,8 +10,8 @@ base theme: classy
 #Using Classy as a base theme https://www.drupal.org/theme-guide/8/classy
 
 regions:
-  secondary_nav: Secondary Nav
   primary_nav: Primary Nav
+  secondary_nav: Secondary Nav
   content: Content
   footer: Footer
 
