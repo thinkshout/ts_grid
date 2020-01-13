@@ -6,6 +6,7 @@
 // other. Here's an example of how to add the accessible card link component.
 // See wiki: https://github.com/thinkshout/ts_grid/wiki/Accessibility#making-accessible-clickable-cards
 import tsCardLink from "./components/ts_card_link.js";
+import tsHamburgerNav from "./components/ts_hamburger_nav.js";
 
 // You can use imports with aliases now!
 // Webpack also uses tree shaking here, meaning only sayHello will be imported.
@@ -18,6 +19,14 @@ import { sayHello as sH } from "./utils.js";
   Drupal.behaviors.tsCardLink = {
     attach: tsCardLink
   };
+
+  /**
+   * This calls the tsHamburger Nav behavior into the main.js global file.
+   **/
+  Drupal.behaviors.tsCardLink = {
+    attach: tsHamburgerNav
+  };
+
 
   /**
    * This example behavior shows a lot of the new useful syntax in ES6.
