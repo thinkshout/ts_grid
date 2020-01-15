@@ -3,6 +3,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @include mq($md) {
+    display: none;
+  }
 }
 
 .menu-toggle {
@@ -82,5 +86,9 @@
     right: 0;
     top: 56px;
     z-index: 10;
+
+    @include mq($md) {
+      display: none;
+    }
   }
 }
