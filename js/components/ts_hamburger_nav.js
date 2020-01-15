@@ -4,7 +4,6 @@
  */
 
 export default function (context) {
-  console.log('nav!!');
   // Alias global jQuery object.
   const $ = jQuery;
   let tabbingContext = null;
@@ -12,6 +11,7 @@ export default function (context) {
 
     function toggleMenu() {
       var toggle = $(".menu-toggle");
+      var target = $(".mobile-menu-target");
       toggle.toggleClass("active");
       if (toggle.hasClass("active")) {
         toggle.attr("aria-label", "Close mobile menu");
@@ -19,12 +19,12 @@ export default function (context) {
       else {
         toggle.attr("aria-label", "Open mobile menu");
       }
-      $(".mobile-menu-target").toggleClass("expanded");
-      $(".mobile-menu-target")
+      target.toggleClass("expanded");
+      target
         .closest(".region")
         .toggleClass("mobile-menu-open");
       if (
-        $(".mobile-menu-target").hasClass("expanded") &&
+        target.hasClass("expanded") &&
         window.outerWidth <= 500
       ) {
         tabbingContext = Drupal.tabbingManager.constrain(
@@ -58,7 +58,7 @@ export default function (context) {
         if (
           !$(e.target).closest(".mobile-menu-target").length &&
           !$(e.target).closest(".menu-toggle").length &&
-          $(".mobile-menu-target").hasClass("expanded")
+          target.hasClass("expanded")
         ) {
           toggleMenu();
         }

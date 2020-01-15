@@ -70,3 +70,17 @@
     }
   }
 }
+
+// Expanded menu
+.mobile-menu-target {
+  display: none;
+
+  &.expanded {
+    display: block;
+    padding: $grid-gutter;
+    position: absolute;
+    right: 0;
+    top: 56px;
+    z-index: 10;
+  }
+}
