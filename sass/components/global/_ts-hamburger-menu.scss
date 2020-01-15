@@ -1,0 +1,72 @@
+// Base hamburger styles. TODO: change based on your project's needs.
+.ts-menu-toggle-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-toggle {
+  border: none;
+  float: right;
+  padding: calc(#{$grid-gutter}*1.5);
+  position: relative;
+  z-index: 6;
+
+  div {
+    span {
+      background-color: $black;
+      font-size: 0;
+      height: 4px;
+      left: 50%;
+      position: absolute;
+      transition: background-color 0.3s;
+      width: 28px;
+      -webkit-transform: translateX(-50%);
+      transform: translateX(-50%);
+
+      &:before,
+      &:after {
+        background: $black;
+        content: "";
+        height: 100%;
+        left: 0;
+        position: absolute;
+        transform: translateY(-200%);
+        transition: transform 0.3s;
+        width: 100%;
+        z-index: 10;
+      }
+      &:after {
+        transform: translateY(200%);
+      }
+    }
+  }
+  &.active {
+    div span {
+      background-color: transparent;
+      &:before,
+      &:after {
+        background: $black;
+        transform: rotate(45deg) translateY(0);
+        transition: transform $transition-defaults;
+      }
+      &:after {
+        transform: rotate(-45deg) translateY(0);
+      }
+    }
+
+    @include hocus {
+      div span {
+        background-color: transparent;
+      }
+    }
+  }
+
+  @include hocus {
+    div span,
+    div span:before,
+    div span:after {
+      background-color: $black;
+    }
+  }
+}
