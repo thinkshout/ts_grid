@@ -239,14 +239,15 @@
 
 /* UTILITIES */
 
-// Accessibly hide
-@mixin hide {
-  left: -10000px;
-  height: 1px;
+/* Accessibly hide - make visibly hidden.
+Reference: https://www.drupal.org/docs/8/accessibility/hide-content-properly.*/
+@mixin visibility-hidden {
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
   overflow: hidden;
-  position: absolute;
-  top: auto;
+  height: 1px;
   width: 1px;
+  word-wrap: normal;
 }
 
 // Combine active, hover, and focus for accessibility purposes
