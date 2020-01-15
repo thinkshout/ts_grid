@@ -241,11 +241,11 @@
 
 /* Accessibly hide - make visibly hidden.
 Reference: https://www.drupal.org/docs/8/accessibility/hide-content-properly.*/
-@mixin visibility-hidden {
-  position: absolute !important;
+@mixin visually-hidden {
   clip: rect(1px, 1px, 1px, 1px);
-  overflow: hidden;
   height: 1px;
+  position: absolute !important;
+  overflow: hidden;
   width: 1px;
   word-wrap: normal;
 }
