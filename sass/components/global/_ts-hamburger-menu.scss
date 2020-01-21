@@ -89,7 +89,7 @@
     opacity: 1;
     transition: opacity $transition-defaults;
     visibility: visible;
-    
+
     @include mq($md) {
       display: none;
     }
