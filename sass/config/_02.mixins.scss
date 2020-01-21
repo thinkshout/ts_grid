@@ -63,17 +63,22 @@
 
 //Grid Browser Compliance (requires parent element with `.grid`)
 @mixin column-width($start, $end) {
+  $spanWidth: $end - $start;
+
   grid-column: #{$start} / #{$end};
+  -ms-grid-column: #{$start} !important;
+  -ms-grid-column-span: #{$spanWidth};
 }
 
 // Centers a column on the page
 @mixin center-columns($centered-columns, $total-columns) {
   @if ($total-columns - $centered-columns == 0) {
-    grid-column: 1 / calc(#{$total-columns} + 1);
+    $total-columns: $total-columns + 1;
+    @include column-width(1, $total-columns);
   } @else {
     $position-left: ($total-columns - $centered-columns)/2 + 1;
     $position-right: $position-left + $centered-columns;
-    grid-column: #{$position-left} / #{$position-right};
+    @include column-width(#{$position-left}, #{$position-right});
   }
 }
 
@@ -239,14 +244,15 @@
 
 /* UTILITIES */
 
-// Accessibly hide
-@mixin hide {
-  left: -10000px;
+/* Accessibly hide - make visibly hidden.
+Reference: https://www.drupal.org/docs/8/accessibility/hide-content-properly.*/
+@mixin visually-hidden {
+  clip: rect(1px, 1px, 1px, 1px);
   height: 1px;
+  position: absolute !important;
   overflow: hidden;
-  position: absolute;
-  top: auto;
   width: 1px;
+  word-wrap: normal;
 }
 
 // Combine active, hover, and focus for accessibility purposes
@@ -274,6 +280,17 @@
   border: none;
   border-radius: 0;
   box-shadow: none;
+}
+
+// IE 10 and 11 Support
+@mixin support-ie {
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    @content;
+  }
+
+  @supports (-ms-ime-align: auto) {
+    @content;
+  }
 }
 
 /* UNIQUE TO PROJECT */
