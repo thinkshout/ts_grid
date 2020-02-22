@@ -10,6 +10,7 @@ main:
     - core/drupal
     - core/drupalSettings
     - core/jquery.once
+    - core/drupal.tabbingmanager
 
 dev:
   version: VERSION
