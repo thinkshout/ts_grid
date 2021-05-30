@@ -1,0 +1,49 @@
+// Font Modifiers: font weight, text transform and letter spacing.
+
+// Weight
+.bold,
+p.bold {
+  font-weight: $bold;
+}
+
+.semibold {
+  font-weight: $semibold;
+}
+
+.medium {
+  font-weight: $medium;
+}
+
+.regular {
+  font-weight: $regular;
+}
+
+.book,
+.light {
+  font-weight: $book;
+}
+
+// Additional
+.upper {
+  text-transform: uppercase;
+}
+
+.letter-spacing {
+  letter-spacing: 1.33px;
+}
+
+.center-text {
+  text-align: center;
+
+  .mobile-text-left {
+    text-align: left;
+
+    @include mq(md) {
+      text-align: center;
+    }
+  }
+}
+
+.hyphenate {
+  hyphens: auto;
+}

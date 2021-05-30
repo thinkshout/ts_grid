@@ -1,0 +1,259 @@
+/**
+ * @file
+ * FORMS - global form element styling.
+ */
+.views-exposed-form,
+.webform-submission-form {
+  input,
+  select,
+  .form-text,
+  .form-email,
+  textarea {
+    @extend .p;
+    font-family: $font-family-sans;
+    border-bottom: 1px solid $black;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-radius: unset;
+    -webkit-box-shadow: unset;
+    box-shadow: unset;
+    color: $black;
+    display: inline-block;
+    margin-bottom: $spacer-md;
+    padding: $spacer-xs 0 $spacer-xxs $spacer-xxs;
+    width: 100%;
+
+    &:focus {
+      background-color: rgba(#efefef, 0.9);
+      outline: none;
+    }
+  }
+
+  option {
+    @extend .p;
+    font-family: $font-family-sans;
+    padding: 0;
+  }
+
+  input[type="submit"] {
+    @extend .button-solid;
+    width: auto;
+  }
+
+  .input-search,
+  .form-item-search-api-fulltext {
+    width: 94%;
+
+    @include mq(md) {
+      width: 84%;
+    }
+    input[name="search_api_fulltext"] {
+      background-image: url("../img/svg/icon-search.svg");
+      background-repeat: no-repeat;
+      background-position: 100% 60%;
+      background-size: 1.5rem 1.25rem;
+      padding-right: 2rem;
+    }
+  }
+
+  // Checkbox Inputs
+  .checkboxes--wrapper legend {
+    @extend .h3, .margin-bottom-sm;
+  }
+
+  // Checkboxes entire element
+  .js-webform-checkboxes {
+    cursor: pointer;
+    display: block;
+    margin: $spacer-xs 0 0;
+    position: relative;
+    text-transform: unset;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    // Checkbox -- individual
+    .js-form-item {
+      margin-bottom: $spacer-xs;
+    }
+
+    label {
+      @extend .p;
+      color: $black;
+      letter-spacing: unset;
+      font-weight: $light;
+      margin-left: $spacer-xxs;
+      position: relative;
+      text-transform: initial;
+    }
+
+    input {
+      cursor: pointer;
+
+      @include hocus {
+        & + .form-checkbox {
+          background-color: $black;
+        }
+      }
+
+      &:checked ~ .form-checkbox {
+        background-color: $grey-lt;
+      }
+    }
+  }
+
+  .form-checkbox {
+    background-color: transparent;
+    border: 2px solid $black;
+    border-radius: 2px;
+    position: relative;
+    height: 20px;
+    margin: 0;
+    appearance: none;
+    padding: 0;
+    width: 20px;
+
+    &:active,
+    &:checked {
+      background-color: $black;
+    }
+    &:checked {
+      background-image: url(../img/svg/check.svg);
+    }
+  }
+  //End checkboxes
+
+  //Select
+  .form-select,
+  select,
+  .js-form-type-select {
+    position: relative;
+  }
+
+  select {
+    background-image: url("../img/svg/icon-select-chevron-down-navy.svg");
+    background-repeat: no-repeat;
+    background-position: 100% 60%;
+    background-size: 1.5rem 1rem;
+  }
+
+  //Radio
+  .radios--wrapper {
+    @extend .margin-top-md, .margin-bottom-xl;
+    legend {
+      @extend .h3, .margin-bottom-sm;
+    }
+  }
+
+  // Radio section wrapper
+  .js-webform-radios {
+    color: $black;
+    display: block;
+    margin-bottom: $spacer-sm;
+
+    // Radio item wrapper
+    .js-form-item-radios {
+      margin-bottom: $spacer-xs;
+    }
+
+    //Radio label
+    label {
+      @extend .p;
+      color: $black;
+      letter-spacing: unset;
+      text-transform: initial;
+      font-weight: $light;
+      margin-left: $spacer-md;
+      position: relative;
+
+      // Styled radio button
+      &:before,
+      &:after {
+        border-radius: 50%;
+        content: "";
+        cursor: pointer;
+        padding: 0;
+        position: absolute;
+      }
+
+      // Styled radio button background.
+      &:before {
+        border: 1.5px solid $grey-dk;
+        height: 21px;
+        left: calc(-1 * #{$spacer-md});
+        top: 0;
+        margin: 0 $spacer-xs 0 $spacer-xxs;
+        width: 21px;
+      }
+
+      // Styled radio button fill.
+      &:after {
+        background-color: white;
+        display: none;
+        height: 10px;
+        left: -20px;
+        top: 27%;
+        width: 10px;
+      }
+    }
+
+    // Actual radio input
+    .form-radio {
+      left: -2000px;
+      position: absolute;
+      top: auto;
+
+      // Interaction styles
+      @include hocus {
+        & + label {
+          color: $grey-dk;
+          &:before {
+            background-color: $grey-lt;
+          }
+        }
+      }
+
+      &:active,
+      &:checked {
+        & + label:before {
+          background-color: $grey-dk;
+        }
+        & + label:after {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+.pager {
+  margin: $spacer-md;
+  @include mq(md) {
+    margin: $spacer-xl;
+  }
+
+  ul {
+    margin: auto;
+    padding: 0;
+
+    li {
+      display: inline-block;
+      margin: 0 $spacer-xs;
+    }
+  }
+
+  a {
+    // Hocus is built-into .small-text.
+    @extend .small-text;
+    border-bottom: 1px solid transparent;
+    color: $navy;
+    font-weight: $semibold;
+    text-transform: uppercase;
+  }
+
+  .pager__item.is-active {
+    border-bottom: 1px solid $navy;
+  }
+}

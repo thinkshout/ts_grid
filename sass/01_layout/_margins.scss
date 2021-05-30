@@ -1,0 +1,195 @@
+// Applies consistent spacing between smaller elements
+
+// SPACING CLASSES FOR ENTIRE ELEMENTS
+.card-padding {
+  padding: 1rem 1rem;
+
+  @include mq(md) {
+    padding: rem(25) rem(30);
+  }
+}
+
+.card-margin {
+  margin-bottom: $spacer-xl;
+}
+
+// SPACING CLASSES AS MODIFIERS INCLUDE:
+// margin-[direction]-xs / sm / md / lg / xl / xxl / xxxl / zero
+
+//ZERO
+.margin-zero,
+p.body-text.margin-zero {
+  margin: 0;
+}
+
+.margin-bottom-zero {
+  margin-bottom: 0;
+}
+
+.margin-top-zero,
+.margin-top-zero p {
+  margin-top: 0;
+}
+
+.margin-zero-auto {
+  @include mq(md) {
+    margin: 0 auto;
+  }
+}
+
+//XXS: .25rem, $spacer-xxs
+.margin-top-xxs {
+  margin-top: $spacer-xxs;
+}
+
+.margin-right-xxs {
+  margin-right: $spacer-xxs;
+}
+
+.margin-bottom-xxs {
+  margin-bottom: $spacer-xxs;
+}
+
+.margin-left-xxs {
+  margin-left: $spacer-xxs;
+}
+
+//XS: .5rem, $spacer-xs
+.margin-top-xs,
+p.body-text {
+  margin-top: $spacer-xs;
+}
+
+.margin-right-sm {
+  margin-right: $spacer-xs;
+}
+
+.margin-bottom-xs {
+  margin-bottom: $spacer-xs;
+}
+
+.margin-left-xs {
+  margin-left: $spacer-xs;
+}
+
+//SM: 1rem = 16px = $spacer-sm
+.margin-top-sm,
+p.body-text {
+  margin-top: $spacer-sm;
+}
+
+.margin-right-sm {
+  margin-right: $spacer-sm;
+}
+
+.margin-bottom-sm,
+p.body-text,
+.h3.margin-bottom-sm {
+  margin-bottom: $spacer-sm;
+}
+
+.margin-left-sm {
+  margin-left: $spacer-sm;
+}
+
+//MD: 2rem = 16px = $spacer-md
+.margin-top-md {
+  margin-top: $spacer-md;
+}
+
+.margin-right-md {
+  margin-right: $spacer-md;
+}
+
+.margin-bottom-md,
+p.margin-bottom-md {
+  margin-bottom: $spacer-sm;
+
+  @include mq(md) {
+    margin-bottom: $spacer-md;
+  }
+}
+
+.margin-left-md {
+  margin-left: $spacer-md;
+}
+
+//LG: 3rem = 48px = $spacer-lg
+.margin-top-lg {
+  margin-top: $spacer-md;
+
+  @include mq(md) {
+    margin-top: $spacer-lg;
+  }
+}
+
+.margin-right-lg {
+  margin-right: $spacer-lg;
+}
+
+.margin-bottom-lg,
+p.margin-bottom-lg {
+  margin-bottom: $spacer-lg;
+}
+
+.margin-left-lg {
+  margin-left: $spacer-lg;
+}
+
+//XL: 4rem = 64px = $spacer-xl
+.margin-top-xl {
+  margin-top: $spacer-lg;
+  @include mq(md) {
+    margin-top: $spacer-xl;
+  }
+}
+
+.margin-right-xl {
+  margin-right: $spacer-lg;
+  @include mq(md) {
+    margin-right: $spacer-xl;
+  }
+}
+
+.margin-bottom-xl,
+p.margin-bottom-lg {
+  margin-bottom: $spacer-lg;
+  @include mq(md) {
+    margin-bottom: $spacer-xl;
+  }
+}
+
+.margin-left-xl {
+  margin-left: $spacer-lg;
+  @include mq(md) {
+    margin-left: $spacer-xl;
+  }
+}
+.height-xxs {
+  height: $spacer-xxs;
+}
+.height-xs {
+  height: $spacer-xs;
+}
+.height-sm {
+  height: $spacer-sm;
+}
+.height-md {
+  height: $spacer-md;
+}
+.height-lg {
+  height: $spacer-lg;
+}
+.height-xl {
+  height: $spacer-xl;
+}
+.height-xxl {
+  height: $spacer-xxl;
+}
+.height-xxxl {
+  height: $spacer-xxxl;
+}
+
+.width-50 {
+  width: 50%;
+}

@@ -1,0 +1,71 @@
+/***
+ * VARIABLES - See theme Readme for more details.
+ * Includes Colors, font families, font weights,
+ * breakpoints, grid and gutter sizes, transitions
+ * and element sizes.
+*/
+
+/* COLORS */
+// Primary
+$black: #000000;
+$white: #ffffff;
+$grey-dk: #444;
+$grey-lt: #ededed;
+
+// Secondary
+
+/* FONTS */
+$font-family-serif: "Geller Headline", Times, serif;
+$font-family-sans: "Halyard Text", Helvetica, Arial, sans-serif;
+
+$letterspacing: 1.1px;
+
+// Weights
+$book: 300;
+$light: $book;
+$regular: 400;
+$medium: 500;
+$semibold: 600;
+$bold: 700;
+
+/* BREAKPOINTS */
+// Small screen / phone
+$sm: 0;
+// Phablet / in between mobile and tablet
+$ph: 501px;
+// Medium screen / tablet
+$md: 769px;
+// Large screen / desktop
+$lg: 1025px;
+// Extra large screen / wide desktop
+$xl: 1442px;
+// Double Extra large screens / wide monitor
+$xxl: 2000px;
+
+/* GRID */
+$grid-max-width: 1260px; // Where the content begins and ends for desktops.
+$grid-max-width-xxl: 1575px; // Where the content begins and ends for xl screens.
+$site-max-width: 2000px; // Where the site begins and ends regardless of larger screens.
+
+//Use as base padding and margin sizes that relate back to the grid
+$grid-gutter: 25px;
+
+$grid-columns-mobile: 4;
+$grid-columns: 12;
+
+//Gutter (space between columns).
+$gutter: $spacer-sm;
+$gutter-lg: $spacer-md;
+
+/* MISC. */
+$transition-defaults: all 300ms ease-in-out;
+
+// Spacing Sizes (margin, padding, element sizes)
+$spacer-xxs: 0.25rem; // 4px XXS
+$spacer-xs: 0.5rem; // 8px XS
+$spacer-sm: 1rem; // 16px SM
+$spacer-md: 2rem; // 32px SM
+$spacer-lg: 3rem; // 48px LG
+$spacer-xl: 4rem; // 64px XL
+$spacer-xxl: 6rem; // 96px XXL
+$spacer-xxxl: 8.125rem; //130px XXL

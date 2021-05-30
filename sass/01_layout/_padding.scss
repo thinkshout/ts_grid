@@ -1,0 +1,56 @@
+//GLOBAL PARAGRAPH PADDING SETTINGS
+
+//Applies consistent padding between large vertical elements, like paragraphs.
+.padding-vert-none {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+%padding-vertical,
+.padding-vertical {
+  padding-top: $spacer-md;
+  padding-bottom: $spacer-md;
+  @include mq(md) {
+    padding-top: $spacer-xxl;
+    padding-bottom: $spacer-xxl;
+  }
+}
+
+%padding-vertical-sm,
+.padding-vertical-sm {
+  padding-top: $spacer-md;
+  padding-bottom: $spacer-md;
+  @include mq(md) {
+    padding-top: $spacer-lg;
+    padding-bottom: $spacer-lg;
+  }
+}
+
+.padding-vertical-lg {
+  padding-top: $spacer-xxxl;
+  padding-bottom: $spacer-xxxl;
+  @include mq(md) {
+    padding-top: $spacer-xxxl;
+    padding-bottom: $spacer-xxxl;
+  }
+}
+
+%padding-top,
+.padding-top {
+  padding-top: 4rem;
+  @include mq(md) {
+    padding-top: 6rem;
+  }
+}
+
+%padding-bottom,
+.padding-bottom {
+  padding-bottom: 4rem;
+  @include mq(md) {
+    padding-bottom: 6rem;
+  }
+}
+
+.padding-friendly + .padding-friendly {
+  padding-top: 0;
+}

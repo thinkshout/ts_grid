@@ -1,0 +1,170 @@
+//wysiwyg styles
+.wysiwyg-text-wrapper,
+.paragraph--type--textarea,
+.field--name-field-text-long-formatted {
+  .button-outline,
+  .button-solid {
+    @extend .margin-top-sm;
+    display: inline-block;
+  }
+
+  h2 {
+    @extend .h3-alt;
+    @extend .margin-top-xl;
+    @extend .margin-bottom-sm;
+
+    & + h3 {
+      @extend .margin-top-md;
+    }
+  }
+
+  h3 {
+    @extend .h3;
+    margin-bottom: 0;
+
+    &.h3-alt {
+      @extend .h3-alt;
+    }
+
+    & + p {
+      margin-top: $spacer-sm;
+    }
+
+    & + p.small-text {
+      margin-top: $spacer-xs;
+    }
+  }
+
+  h4 {
+    @extend .h4;
+    line-height: 1.3;
+    margin-bottom: 0;
+    text-transform: none;
+
+    & + p {
+      margin-top: 0;
+    }
+  }
+
+  p,
+  li {
+    @extend .p;
+
+    &.intro {
+      @extend .intro;
+    }
+
+    &.small-text {
+      @extend .small-text;
+    }
+  }
+
+  a.link-chevron {
+    @extend .margin-bottom-md;
+    border-bottom: none;
+  }
+
+  ul,
+  ol {
+    padding-left: 30px;
+  }
+
+  ol li {
+    text-align: left;
+    padding-left: 10px;
+
+    &::marker {
+      color: $navy;
+      font-weight: $semibold;
+      padding-left: $spacer-xs;
+    }
+  }
+
+  ul li {
+    display: block;
+    position: relative;
+
+    &::before {
+      content: "\f105";
+      color: $navy;
+      display: inline-block;
+      font-family: "FontAwesome";
+      font-weight: $regular;
+      left: -25px;
+      position: absolute;
+      top: 0;
+    }
+
+    ul {
+      padding-top: $spacer-sm;
+    }
+
+    ul li::before {
+      content: "•";
+    }
+  }
+
+  hr {
+    @extend .margin-top-sm;
+    @extend .margin-bottom-sm;
+  }
+
+  //Blockquote
+  blockquote {
+  }
+
+  //Image and Media styles
+  figure.caption,
+  article.media {
+    margin: 0;
+
+    &.media--view-mode-inline-half-image img {
+      height: auto;
+
+      @include mq(md) {
+        max-width: 50%;
+      }
+    }
+  }
+
+  figcaption {
+    @extend .p;
+  }
+
+  .align-center {
+    text-align: center;
+  }
+
+  .align-left {
+    text-align: left;
+    @include mq(md) {
+      padding-right: $spacer-sm;
+    }
+  }
+  .align-right {
+    text-align: right;
+    @include mq(md) {
+      padding-left: $spacer-sm;
+    }
+  }
+
+  .field--name-field-media-oembed-video {
+    .field__item {
+      height: 0;
+      padding-bottom: 56.25%; /* 16:9 */
+      position: relative;
+    }
+
+    iframe {
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+  }
+}
+
+.field--name-field-text-long-formatted > p:first-of-type {
+  margin-top: 0;
+}

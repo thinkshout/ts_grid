@@ -1,0 +1,106 @@
+/***
+ * @file
+ * BASE - Base element styles
+ * Override default settings on html elements, set global body styles.
+ */
+html {
+  background-color: $grey-lt;
+  font-family: $font-family-sans;
+}
+
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  background-color: $white;
+  font-style: normal;
+  font-weight: $light;
+  margin: 0 auto;
+  max-width: $site-max-width;
+  position: relative;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+div {
+  &.display-inline {
+    display: inline;
+  }
+
+  &.display-inline-block {
+    display: inline-block;
+  }
+}
+
+select {
+  /* for Firefox */
+  -moz-appearance: none;
+  /* for Chrome */
+  -webkit-appearance: none;
+}
+
+/* For IE10 */
+select::-ms-expand {
+  display: none;
+}
+
+fieldset {
+  border: unset;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: unset;
+}
+
+a {
+  text-decoration: none;
+
+  @include hocus {
+    outline: none;
+    transition: $transition-defaults;
+  }
+}
+
+// Table
+table {
+  text-align: left;
+  width: 100%;
+}
+
+td,
+th {
+  padding: 0.25rem 0.5rem;
+
+  @include mq(md) {
+    padding: 0.5rem 0.75rem;
+  }
+}
+
+td.padding-vert-none,
+th.padding-vert-none {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+dl {
+  margin-top: 0;
+}
+
+dd {
+  margin-left: 0;
+}
+
+th,
+.filler-cell {
+  background-color: $grey-lt;
+}

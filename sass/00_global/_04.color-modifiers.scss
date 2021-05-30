@@ -1,0 +1,46 @@
+// Color Modifiers: Color, Background and overlay.
+
+// Primary colors (a-z)
+.black,
+a.black,
+.black a {
+  color: $black;
+}
+
+.navy,
+.navy a {
+  color: $black;
+}
+
+.white,
+.white a {
+  color: $white;
+}
+
+//Secondary colors (a-z)
+
+// Backgrounds (a-z)
+.bg-black {
+  background-color: $black;
+}
+
+.bg-white {
+  background-color: $white;
+}
+
+.outline {
+  border: 1px solid $grey-lt;
+  border-radius: 10px;
+}
+
+// Within an element with position: relative,
+// like on Hero photo style.
+.photo-overlay {
+  background-color: rgba(#000, 0.7);
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}

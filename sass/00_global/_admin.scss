@@ -1,0 +1,94 @@
+//Admin Menu
+//Styles arrow svg from ts_admin.js
+.admin-arrow .show-hide {
+  height: 100%;
+
+  svg {
+    height: 1rem;
+    width: 1rem;
+    transform: rotate(-90deg);
+    transition: transform 300ms ease-in-out;
+    path {
+      fill: $white;
+    }
+  }
+}
+
+.region-content #block-tabs .tabs.primary {
+  background: white;
+  box-shadow: 1px 2px 3px 0 rgba(0, 0, 0, 0.15);
+  left: -11rem;
+  position: fixed;
+  padding: 0.5rem;
+  top: 33%;
+  transition: right 300ms ease-in-out;
+  width: 10rem;
+  z-index: 200;
+
+  ul.tabs {
+    margin: 0;
+  }
+
+  li a {
+    @extend .nav-text;
+    color: $navAccent;
+    display: inline-block;
+    margin: 0.25rem 0.5rem;
+    transition: background-color 0.4s linear;
+    @include hocus {
+      transition: $transition-defaults;
+    }
+  }
+
+  li.is-active {
+    background-color: $navAccent;
+    a {
+      color: white;
+    }
+  }
+
+  .show-hide {
+    background-color: #000;
+    border: 1px solid white;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    bottom: 0;
+    cursor: pointer;
+    font-size: 2rem;
+    height: 3.5rem;
+    right: -2.1rem;
+    padding: 0 8px 0 9px;
+    position: absolute;
+    top: 0;
+
+    @include hocus {
+      background-color: mix(black, $navAccent, 50%);
+    }
+  }
+
+  &.active {
+    left: 0;
+  }
+
+  &.active .show-hide svg {
+    transform: rotate(90deg);
+  }
+
+  .contextual {
+    top: -10px;
+  }
+}
+
+.region-content.toolbar-fixed {
+  .toolbar,
+  #toolbar-item-administration-tray.toolbar-tray-vertical {
+    position: fixed;
+  }
+}
+
+.region-content
+  .toolbar
+  #toolbar-item-administration-tray.toolbar-tray-vertical {
+  position: absolute;
+  height: auto;
+}
