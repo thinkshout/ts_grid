@@ -1,0 +1,608 @@
+{# Global Style Guide available at /styleguide #}
+<div class="bg-navy padding-vertical styleguide-nav">
+  <div class="card-padding white">
+    <h1 class="h2 cream">Styleguide</h1>
+    <div class="small-text">
+      <p class="margin-top-zero margin-bottom-sm"><em>Reusable styles using classes (sass/global)</em></p>
+      <a href="#fontstyles" class="display-block margin-bottom-xs small-text semibold white">Font styles</a>
+      <a href="#fontmodifiers" class="display-block margin-bottom-xs small-text semibold white">Font Modifiers (color, weight, etc)</a>
+      <a href="#linkstyles" class="display-block margin-bottom-xs small-text semibold white">Link & Button
+        styles</a>
+      <a href="#gridlayout" class="display-block margin-bottom-xs small-text semibold white">Grid/Layout</a>
+      <a href="#spacing" class="display-block margin-bottom-xs small-text semibold white">Margin, Padding & Spacing</a>
+      <a href="#positioning" class="display-block margin-bottom-xs small-text semibold white">Common CSS</a>
+      <a href="#elements" class="display-block margin-bottom-xs small-text semibold white">Decorative Elements</a>
+      <a href="#bgstyles" class="display-block margin-bottom-xs small-text semibold white">Background styles</a>
+      <a href="#forms" class="display-block margin-bottom-xs small-text semibold white">Forms</a>
+      <a href="#wysiwygstyles" class="display-block margin-bottom-xs small-text semibold white">Wysiwyg and
+        Components</a>
+      <a href="#samplecomponents" class="display-block margin-bottom-xs small-text semibold white">Sample Paragraphs</a>
+    </div>
+  </div>
+</div>
+
+<div class="styleguide-menu-padding">
+
+  <div class="container content-side-padding padding-vertical">
+    <div class="grid grid-col-2">
+      <div>
+        <h2 class="h2 navy margin-top-md" id="fontstyles">Font styles</h2>
+        <p class="margin-top-zero">sass/global/_02.font-styles.scss</p>
+        <h1 class="h1 margin-bottom-xs">.h1</h1>
+        <h2 class="h2 margin-bottom-xs">.h2</h2>
+        <h3 class="h3 margin-bottom-xs">.h3</h3>
+        <h3 class="h3-alt margin-bottom-xs">.h3-alt</h3>
+        <a class="h3-alt margin-bottom-md">a.h3-alt</a>
+        <h4 class="h4 margin-top-sm ">.h4</h4>
+        <hr class="margin-top-sm margin-bottom-sm">
+        <p class="intro">.intro</p>
+        <p class="p">.p</p>
+        <a class="p margin-bottom-sm">a.p</a>
+        <p class="p regular">.p.regular</p>
+        <p class="small-text">.small-text</p>
+        <p class="nav-text">.nav-text</p>
+        <label>label (.nav-text + blue)</label>
+        <a href=" " class="display-block nav-text">a.nav-text</a>
+      </div>
+      <div>
+        <h3 class="h4 letter-spacing margin-top-md navy">Common Variations</h3>
+        <p class="margin-zero">sass/global/_03.font-modifiers.scss</p>
+        <p class="margin-zero">sass/global/_04.color-modifiers.scss</p>
+        <hr class="margin-top-sm margin-bottom-sm">
+        <h1 class="h1 white bg-purple margin-bottom-xs">.h1.white</h1>
+        <h2 class="h2 margin-bottom-xs navy">.h2.navy</h2>
+        <h3 class="bg-purple card-padding h3-alt margin-bottom-xs white">.h3-alt.white</h3>
+        <h4 class="h4 margin-top-sm margin-bottom-zero navy">.h4.navy</h4>
+        <h4 class="bg-orange card-padding h4 margin-top-sm white">.h4.white</h4>
+        <h4 class="bg-navy card-padding h4 letter-spacing margin-top-zero white">.h4.letter-spacing .white</h4>
+        <hr class="margin-top-sm margin-bottom-sm">
+        <p class="bg-purple card-padding intro white">.intro.white</p>
+        <p class="bg-purple card-padding p regular white">.p.regular.white</p>
+        <p class="bg-yellow black card-padding p semibold">.p.semibold.black</p>
+        <p class="bg-navy card-padding small-text white">.small-text.white</p>
+        <a href=" " class="bg-purple card-padding nav-text white bg-navy">a.nav-text
+          .white</a>
+        <p class="grey margin-top-md small-text">.small-text.grey</p>
+        <p class="nav-text teal-dk">.nav-text.teal-dk</p>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container content-side-padding padding-vertical">
+    <h3 class="h2 navy" id="fontmodifiers">Font Modifiers</h3>
+    <div class="grid grid-col-2">
+      <div>
+        <h3 class="h3 margin-top-md">Color</h3>
+        <p class="margin-top-zero">sass/global/_04.color-modifiers.scss</p>
+        <h4 class="h4 letter-spacing margin-bottom-zero navy upper">Primary</h4>
+        <p class="small-text grey">Use the color name as a class to change text color. </p>
+        <p class="black margin-zero small-text">.black</p>
+        <p class="navy margin-zero small-text">.navy</p>
+        <p class="orange margin-zero small-text">.orange</p>
+        <p class="white inline-block margin-zero bg-purple small-text">.white.bg-purple</p>
+      </div>
+
+      <div>
+        <h3 class="h3 margin-top-md">Weight</h3>
+        <p class="margin-top-zero">sass/global/_03.font-modifiers.scss</p>
+        <p class="bold">.bold 700</p>
+        <p class="semibold">.semibold 600</p>
+        <p class="medium">.medium 500</p>
+        <p class="regular">.regular 400</p>
+        <p class="book">.book/.light 300</p>
+
+        <h3 class="h3 margin-top-md">Additional</h3>
+        <p class="margin-top-zero">sass/global/_02.font-modifiers.scss</p>
+        <a class="display-block icon-search">.icon-search</a>
+        <p class="letter-spacing">.letterspacing</p>
+        <p class="upper">.upper</p>
+        <p class="center-text">.center-text</p>
+        <p class="hyphenate">.hyphenate</p>
+      </div>
+    </div> {# Closes .grid #}
+  </div> {# Closes .container.content-side-padding #}
+
+  <div class="container content-side-padding padding-vertical">
+    <h2 class="h2 navy" id="linkstyles">Buttons and links</h2>
+    <p class="margin-top-zero">sass/global/_buttons.scss</p>
+    <a class="link-chevron inline-block margin-right-xs" href=" ">.link-chevron</a>
+    <a class="read-more inline-block margin-right-xs" href=" ">.Read-more</a>
+    <a class="link-back inline-block margin-right-xs" href=" ">.link-back</a>
+    <div class="margin-top-sm">
+      <a class="button-outline display-inline-block margin-right-xs" href=" ">.button-outline</a>
+      <a class="button-solid display-inline-block margin-right-xs" href=" ">.button-solid</a>
+      <a href=" " class="button-solid button-wide display-inline-block">.button-solid.button-wide</a>
+      <a href=" " class="tag margin-right-xs">.tag</a>
+      <a class="button-close card-padding display-inline-block margin-right-xs" href=" "></a>.button-close
+      <a class="link-styles display-inline-block" href=" ">.link-styles (default link styles)</a>
+    </div>
+    <div class="margin-top-sm">
+      <a href=" " class="p link-styles">a.link-styles (default hocus)</a>
+    </div>
+    <div>
+      <hr class="margin-bottom-md margin-top-md">
+      <h3 class="h3 margin-bottom-sm">Variations</h3>
+      <p class="small-text grey">Add .icon-[$color] for all color variations</p>
+    </div>
+
+    <hr class="margin-bottom-md margin-top-md">
+    <h3 class="h3 margin-bottom-sm">Social Links</h3>
+    <div class="social-links">
+      <ul>
+        <li><a><i class="fa fa-facebook-square"></i></a></li>
+        <li><a><i class="fa fa-twitter-square"></i></a></li>
+        <li><a><i class="fa fa-linkedin"></i></a></li>
+        <li><a><i class="fab fa-facebook-messenger"></i></a></li>
+        <li><a><i class="fa fa-envelope"></i></a></li>
+        <li><a><i class="fa fa-link"></i></a></li>
+      </ul>
+    </div>
+    <div class="display-inline-block social-links-footer">
+      <a><i class="fab fa-twitter"></i></a>
+      <a><i class="fab fa-linkedin"></i></a>
+    </div>
+  </div> {# Closes .container.content-side-padding#}
+
+  <div class="container content-side-padding">
+    <div class="" id="gridlayout">
+      <h2 class="h2 navy">Grid + Layout</h2>
+      <p class="margin-top-zero">sass/global/layout/_grid.scss, sass/global/layout/_flex.scss</p>
+      <p class="margin-top-zero">Used to show patterns. For the site, most of the layouts use view modes placed in
+        Layout Builder.</p>
+    </div>
+
+    <h3 class="h4">Wrapped in .grid.grid-col-3</h3>
+    <div class="grid grid-col-3">
+      <div class="outline card-padding card-margin">.card-padding</div>
+      <div class="outline card-padding card-margin">.card-padding</div>
+      <div class="outline card-padding card-margin">.card-padding</div>
+    </div>
+
+    <h3 class="h4">Wrapped in .grid.grid-col-2</h3>
+    <div class="grid grid-col-2">
+      <div class="outline card-padding card-margin">.card-padding</div>
+      <div class="outline card-padding card-margin">.card-padding</div>
+    </div>
+
+    <h3 class="h4">Wrapped in .grid.grid-sidebars</h3>
+    <div class="grid grid-sidebars">
+      <div class="grid-item outline card-padding card-margin">.grid-item</div>
+      <div class="grid-item outline card-padding card-margin">.grid-item</div>
+      <div class="grid-item outline card-padding card-margin">.grid-item</div>
+    </div>
+
+    <h3 class="h4">Wrapped in .grid.grid-7-center</h3>
+    <div class="grid grid-7-center">
+      <div class="grid-item outline card-padding card-margin">.grid-item</div>
+    </div>
+
+    <h3 class="h4">Wrapped in .grid.grid-10-right</h3>
+    <div class="grid grid-10-right">
+      <div class="grid-item outline card-padding card-margin">.grid-item</div>
+    </div>
+
+    <h3 class="h4">Wrapped in .flex-wrapper.col-3</h3>
+    <div class="flex-wrapper">
+      <div class="col-3 outline card-padding card-margin">.col-3</div>
+      <div class="col-3 outline card-padding card-margin">.col-3</div>
+      <div class="col-3 outline card-padding card-margin">.col-3</div>
+    </div>
+  </div> {# Closes container#}
+
+  <div class="container content-side-padding">
+    <h2 class="h2 navy margin-top-md margin-bottom-xs" id="spacing">Margin, Padding & Spacing</h2>
+    <p class="margin-top-zero">sass/layout/_margins.scss</p>
+    <p>Used for margin, padding, and height. Designers use mathematical relationships to define spacing. All of the
+      margin, padding and height classes use these base values. The sizes are also available as sass variables.</p>
+
+    <div class="margin-bottom-md">
+      <p class="margin-bottom-sm"><strong>.height-[size]</strong> or <strong>
+          .margin-[direction]-[size]</strong> are available as classes. <br/><strong>$spacer-[size]</strong> is
+        available as sass variables</p>
+      <p class="display-inline margin-right-md">Directions: top | bottom | left | right</p>
+      <p class="display-inline">Sizes: zero | xxs | xs | sm | md | lg | xl | xxl | xxxl</p>
+    </div>
+    <div class="grid grid-col-2">
+      <div>
+        <div class="bg-black height-xxs"></div>
+        <div class="bg-green height-xs"></div>
+        <div class="bg-teal height-sm"></div>
+        <div class="bg-blue height-md"></div>
+        <div class="bg-navy height-lg"></div>
+        <div class="bg-red height-xl"></div>
+        <div class="bg-purple height-xl"></div>
+        <div class="bg-purple-dk height-xxl"></div>
+      </div>
+      <div class="regular small-text">
+        <p class="black"><strong>XXS:</strong> .25rem (4px), $spacer-xxs</p>
+        <p class="grey-dk"><strong>XS:</strong> .5rem (8px), $spacer-xs</p>
+        <p class="grey-lt"><strong>SM:</strong> 1rem (16px), $spacer-sm</p>
+        <p class="black"><strong>MD:</strong> 2rem (16px), $spacer-md</p>
+        <p class="grey-dk"><strong>LG:</strong> 3rem (48px), $spacer-lg</p>
+        <p class="grey-lt"><strong>XL:</strong> 4rem (64px), $spacer-xl</p>
+        <hr class="">
+        <p class="black"><strong>XXL:</strong> 6rem (96px), $spacer-xxl <br/>(.padding-vertical)</p>
+        <p class="grey-dk"><strong>XXXL:</strong> 9rem (130px), $spacer-xxxl <br/>(.padding-vertical-lg)</p>
+      </div>
+    </div>
+
+    <h3 class="h4 navy margin-top-md margin-bottom-xxs">Margin Zero</h3>
+    <hr class="margin-zero">
+    <p class="bg-grey-lt margin-zero">.margin-zero</p>
+    <hr class="margin-zero">
+    <p class="bg-grey-lt margin-zero-auto width-50">.margin-zero-auto</p>
+    <hr class="margin-zero">
+
+    <h4 class="h4 margin-top-lg margin-bottom-xxs navy">Unset default margin</h4>
+    <hr class="margin-zero">
+    <p class="bg-grey-lt margin-bottom-zero">.margin-bottom-zero</p>
+    <hr class="margin-zero">
+    <p class="bg-grey-lt margin-top-zero">.margin-top-zero</p>
+    <hr class="margin-zero">
+
+    {# Margin Top #}
+    <h4 class="h4 margin-top-md margin-bottom-xxs navy">Margin Top</h4>
+    <hr class="margin-zero">
+    <p class="bg-grey-lt margin-top-xxs margin-bottom-zero">.margin-top-xxs</p>
+    <hr class="margin-zero">
+    <p class="bg-grey-lt margin-top-xs margin-bottom-zero">.margin-top-xs</p>
+    <hr class="margin-zero">
+    <p class="bg-grey-lt margin-top-sm margin-bottom-zero">.margin-top-sm</p>
+    <hr class="margin-zero">
+    <p class="bg-grey-lt margin-top-md margin-bottom-zero">.margin-top-md</p>
+    <hr class="margin-zero">
+    <p class="bg-grey-lt margin-top-lg margin-bottom-zero">.margin-top-lg</p>
+    <hr class="margin-zero">
+    <p class="bg-grey-lt margin-top-xl margin-bottom-zero">.margin-top-xl</p>
+    <hr class="margin-zero">
+
+    {# Margin Bottom #}
+    <p class="h4 margin-top-md margin-bottom-xxs navy">Margin Bottom</p>
+    <hr class="margin-zero">
+    <p class="bg-grey-lt margin-bottom-xxs margin-top-zero">.margin-bottom-xxs</p>
+    <hr class="margin-zero">
+    <p class="bg-grey-lt margin-bottom-xs margin-top-zero">.margin-bottom-xs</p>
+    <hr class="margin-zero">
+    <p class="bg-grey-lt margin-bottom-sm margin-top-zero" >.margin-bottom-sm</p>
+    <hr class="margin-zero">
+    <p class="bg-grey-lt margin-bottom-md margin-top-zero">.margin-bottom-md</p>
+    <hr class="margin-zero">
+    <p class="bg-grey-lt margin-bottom-lg margin-top-zero">.margin-bottom-lg</p>
+    <hr class="margin-zero">
+    <p class="bg-grey-lt margin-bottom-xl margin-top-zero">.margin-bottom-xl</p>
+    <hr class="margin-zero">
+
+    {# Margin Left & Right #}
+    <p class="h4 margin-top-md margin-bottom-xxs navy">Margin Left & Right</p>
+    <p class="bg-grey-lt display-inline margin-top-zero margin-left-xxs">.margin-left-xxs</p>
+    <p class="bg-grey-lt display-inline margin-top-zero margin-left-xs">.margin-left-xs</p>
+    <p class="bg-grey-lt display-inline margin-top-zero margin-left-sm">.margin-left-sm</p>
+    <p class="bg-grey-lt display-inline margin-top-zero margin-left-md">.margin-left-md</p>
+    <p class="bg-grey-lt display-inline margin-top-zero margin-left-lg">.margin-left-lg</p>
+    <p class="bg-grey-lt display-inline margin-top-zero margin-left-xl">.margin-left-xl</p>
+    <hr class="margin-zero">
+    <p class="bg-grey-lt display-inline margin-top-zero margin-right-xxs">.margin-right-xxs</p>
+    <p class="bg-grey-lt display-inline margin-top-zero margin-right-xs">.margin-right-xs</p>
+    <p class="bg-grey-lt display-inline margin-top-zero margin-right-sm">.margin-right-sm</p>
+    <p class="bg-grey-lt display-inline margin-top-zero margin-right-md">.margin-right-md</p>
+    <p class="bg-grey-lt display-inline margin-top-zero margin-right-lg">.margin-right-lg</p>
+    <p class="bg-grey-lt display-inline margin-top-zero margin-right-xl">.margin-right-xl</p>
+
+    {# Padding #}
+    <h4 class="h4 margin-top-md margin-bottom-xxs navy">Padding</h4>
+    <p class="margin-top-zero">sass/global/layout/_padding.scss</p>
+    <p class="bg-grey-lt padding-vertical">.padding-vertical</p>
+    <p class="bg-grey-lt padding-vertical-lg">.padding-vertical-lg</p>
+  </div>
+
+  <div class="container content-side-padding padding-bottom">
+    <h2 class="h2 margin-top-md navy" id="positioning">Common CSS</h2>
+    <p class="block">.display-block, .inline, .display-inline-block, .absolute, .relative </p>
+  </div>
+
+  <div class="container content-side-padding padding-vertical">
+    <h2 class="h2 navy" id="elements">Decorative Elements</h2>
+    <p class="margin-top-zero">sass/global/_decorative-elements.scss</p>
+    <hr class="hr-grey-lt margin-top-md">
+    <p class="small-text grey display-inline">hr.hr-grey-lt</p>
+    <hr class="hr-grey margin-top-md">
+    <p class="small-text grey display-inline">hr.hr-grey</p>
+    <hr class="hr-navy margin-top-md">
+    <p class="small-text grey display-inline margin-bottom-md">hr.hr-navy</p>
+    <div class="border-top-navy grey margin-top-md"><p>A div with .border-top-navy</p></div>
+    <div class="border-top-teal grey"><p>A div with .border-top-teal</p></div>
+    <div class="border-top-orange grey"><p>A div with .border-top-orange</p></div>
+    <div class="border-top-purple grey"><p>A div with .border-top-purple</p></div>
+
+    <div class="bg-graphic bg-graphic-orange margin-bottom-md">
+      <h3 class="h3 margin-bottom-sm">.bg-graphic.bg-graphic-orange</h3>
+    </div>
+
+    <div class="bg-graphic bg-graphic-teal margin-bottom-md">
+      <h3 class="h3 margin-bottom-sm">.bg-graphic.bg-graphic-teal</h3>
+    </div>
+
+    <div class="bg-graphic bg-graphic-blue margin-bottom-md">
+      <h3 class="h3 margin-bottom-sm">.bg-graphic.bg-graphic-blue</h3>
+    </div>
+
+    <div class="bg-graphic bg-graphic-red margin-bottom-md">
+      <h3 class="h3 margin-bottom-sm">.bg-graphic.bg-graphic-red</h3>
+    </div>
+  </div> {# Closes .container.content-side-padding #}
+
+  <div class="margin-bottom-md margin-top-md">
+    <div class="container">
+      <h2 class="h2 navy" id="bgstyles">Bg Styles</h2>
+      <p class="margin-top-zero">sass/global/_04.color-modifiers.scss</p>
+    </div>
+    <div class="bg-white">
+      <div class="container">
+        <p class="small-text navy card-padding">.bg-white.navy</p>
+      </div>
+    </div>
+  </div> {# Closes .container.content-side-padding #}
+
+  <div id="forms" class="container content-side-padding padding-vertical">
+    <div class="grid grid-7-center">
+      <div class="grid-item">
+        <div class="margin-bottom-md">
+          <h2 class="display-inline h2 navy">Forms</h2>
+        </div>
+
+        <div class="webform-submission-form">
+          <div class="input-search">
+            <label class="margin-bottom-md" for="search-id">Search</label>
+            <span><input id="search-id" type="text" placeholder="Enter search term" /></span>
+          </div>
+
+          <div class="input-select">
+            <label for="event-type">Select</label>
+            <select id="event-type">
+              <option>All</option>
+              <option>Funder 1</option>
+              <option>Funder 2</option>
+              <option>Funder 3</option>
+            </select>
+          </div>
+
+          <div class="input-text">
+            <label for="email-id">EMAIL</label>
+            <input type="text" placeholder="Email" id="email-id" />
+            <label for="password-id">Password</label>
+            <input type="password" placeholder="Password" id="password-id"/>
+          </div>
+
+          <div class="radios--wrapper">
+
+            <legend>Radio buttons</legend>
+            <fieldset>
+              <legend class="visually-hidden">Event types</legend>
+              <div class="js-webform-radios">
+                <div class="js-form-item-radios">
+                  <input class="form-radio" type="radio" checked="checked" name="radio" id="radio1"/>
+                  <label for="radio1">SCG Events</label>
+                </div>
+                <div class="js-form-item-radios">
+                  <input class="form-radio" type="radio" name="radio" id="radio2">
+                  <label for="radio2">Events in the Field</label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+          {# Checkboxes#}
+          <div class="checkboxes--wrapper">
+              <div class="bg-teal card-padding container margin-top-md margin-bottom-xl">
+                <legend class="visually-hidden">Communication types</legend>
+                <fieldset>
+                  <div class="js-webform-checkboxes">
+                    <div class="js-form-item">
+                      <input type="checkbox" class="form-checkbox" id="c1" checked>
+                      <label  for="c1">President’s Message</label>
+                    </div>
+                    <div class="js-form-item">
+                      <input type="checkbox" class="form-checkbox" id="c2" checked>
+                      <label for="c2">Public Policy Brief</label>
+                    </div>
+                    <div class="js-form-item">
+                      <input type="checkbox" class="form-checkbox" id="c3">
+                      <label for="c3">Family Philanthropy Newsletter</label>
+                    </div>
+                    <div class="js-form-item">
+                      <input type="checkbox" class="form-checkbox" id="c4">
+                      <label for="c4">Corporate Brief</label>
+                    </div>
+                    <div class="js-form-item">
+                      <input type="checkbox" class="form-checkbox" id="c5">
+                      <label for="c5">Weekly Program Update</label>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+          </div>
+        </div> {# Closes .webform-submission-form #}
+      </div> {# Closes .grid-item #}
+    </div> {# Closes .grid #}
+
+    <div class="container content-side-padding">
+      <h2 id="wysiwygstyles" class="h2 margin-bottom-sm black">WYSIWYG and Components</h2>
+      <div class="wysiwyg-text-wrapper">
+        <h3>WYSIWYG</h3>
+        <ul>
+          <li>The Philanthropic Initiative for Racial Equity’s Grantmaking with a Racial Justice Lens
+            Guide lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+          <li>
+            NCRP’s Power Moves: Your essential philanthropy assessment guide for equity and justice
+            <ul>
+              <li>SCG’s Evaluating Your Internal Practices to Become an Anti-Racist Organization
+              </li>
+              <li>And many other immediate resources</li>
+            </ul>
+          </li>
+        </ul>
+        <ol>
+          <li>Emerging systems change efforts</li>
+          <li>Start their advocacy efforts</li>
+          <li>Support our democratic institutions</li>
+          <li>Shift power to the next generation of donors</li>
+        </ol>
+        <blockquote class="blockquote">
+          <p>Blockquote Every day, we have a choice. We can take the easier road, the more cynical road, which is
+            a role sometimes based on a dream of a past that never was. Fear of each other
+            distancing and blame, or we can take the much more difficult path, the road of
+            transformation, transcendence, compassion, and love, but also accountability and
+            justice.</p>
+          <cite>Author Jacqueline Novogratz, Founder and CEO of Acumen</cite>
+        </blockquote>
+      </div>
+    </div> {# Closes .container #}
+
+    <div class="container content-side-padding margin-top-md">
+      <h3 class="h3 margin-bottom-md">Pager</h3>
+      <nav class="pager" aria-labelledby="pagination-heading">
+        <h4 id="pagination-heading" class="visually-hidden">Pagination</h4>
+        <ul class="pager__items js-pager__items">
+          <li class="pager__item is-active">
+            <a href="?phrase=birds&amp;page=0" title="Current page">
+        <span class="visually-hidden">
+          Current page
+        </span>1</a>
+          </li>
+          <li class="pager__item">
+            <a href="?phrase=birds&amp;page=1" title="Go to page 2">
+        <span class="visually-hidden">
+          Page
+        </span>2</a>
+          </li>
+          <li class="pager__item">
+            <a href="?phrase=birds&amp;page=2" title="Go to page 3">
+        <span class="visually-hidden">
+          Page
+        </span>3</a>
+          </li>
+          <li class="pager__item">
+            <a href="?phrase=birds&amp;page=3" title="Go to page 4">
+        <span class="visually-hidden">
+          Page
+        </span>4</a>
+          </li>
+          <li class="pager__item">
+            <a href="?phrase=birds&amp;page=4" title="Go to page 5">
+        <span class="visually-hidden">
+          Page
+        </span>5</a>
+          </li>
+          <li class="pager__item">
+            <a href="?phrase=birds&amp;page=5" title="Go to page 6">
+        <span class="visually-hidden">
+          Page
+        </span>6</a>
+          </li>
+          <li class="pager__item pager__item--next">
+            <a href="?phrase=birds&amp;page=1" title="Go to next page" rel="next">
+              <span class="visually-hidden">Next page</span>
+              <span aria-hidden="true">Next</span>
+            </a>
+          </li>
+          <li class="pager__item pager__item--last">
+            <a href="?phrase=birds&amp;page=27" title="Go to last page">
+              <span class="visually-hidden">Last page</span>
+              <span aria-hidden="true">Last</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>{# Closes .container #}
+
+    <div id="samplecomponents" class="container content-side-padding padding-vertical">
+      <h2 class="display-inline h2 navy">Sample Paragraphs</h2>
+      <div class="grid grid-col-3 margin-top-lg">
+        <div class="border-top-navy card-margin">
+          <p class="h4 margin-top-sm margin-bottom-sm">Webinar</p>
+          <h3 class="margin-bottom-sm"><a href=" " class="h3 black">Friday Morning Refresh — Session 5</a></h3>
+          <p class="small-text margin-zero">May 28, 2020</p>
+          <p class="small-text">8:30am–9:30am</p>
+        </div>
+
+        <div class="card-margin">
+          <p class="h4 margin-top-sm margin-bottom-sm">Blog Type <span>.</span> Month</p>
+          <h3 class="margin-bottom-sm">
+            <a href=" " class="h3 black">
+              Blog Title Lorem ipsum dolor sit consectetur adipisci sed do
+            </a>
+          </h3>
+          <p class="small-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+          </p>
+        </div>
+        <div class="border-top-red card-margin">
+          <p class="h4 margin-top-sm margin-bottom-sm">Action Type <span>.</span> Month 00, 2020</p>
+          <h3 class="margin-bottom-sm">
+            <a href=" " class="h3 black">
+              Foster Together Conference Series: Caregiving from the Other Side — Q&A Featuring Current and Former Youth in Care
+            </a>
+          </h3>
+          <p class="small-text margin-zero">May 28, 2020</p>
+          <p class="small-text">8:30am–9:30am</p>
+        </div>
+      </div>
+
+      <div>
+        <hr class="hr-grey-lt margin-bottom-md">
+        <p class="h4 margin-top-sm margin-bottom-zero">Resource Type <span>.</span> Month</p>
+        <h3 class="margin-bottom-sm margin-top-zero">
+          <a href=" " class="h3 black">
+            Blog Title Lorem ipsum dolor sit consectetur adipisci sed do
+          </a>
+        </h3>
+        <div class="small-text">
+          <p class="purple icon-circle icon-purple">Equity and Social Justice</p>
+          <p class="display-inline icon-pin icon-grey margin-zero">Geographic Focus</p>
+          <p class="display-inline icon-starburst icon-grey margin-top-zero margin-bottom-zero margin-left-sm">Skill
+            Building</p>
+        </div>
+        <hr class="hr-grey-lt margin-top-md">
+      </div>
+    </div>
+
+    <footer class="bg-navy padding-vertical-sm white">
+      <div class="container content-side-padding">
+
+        <nav class="display-inline-block">
+          <ul class="">
+            <li class="margin-bottom-xs"><a href=" " class="nav-text">About Us</a></li>
+            <li class="margin-bottom-xs"><a href=" " class="nav-text">Events & Resources</a></li>
+            <li class="margin-bottom-xs"><a href=" " class="nav-text">Peer Groups</a></li>
+            <li class="margin-bottom-xs"><a href=" " class="nav-text">Collaborations</a></li>
+            <li class="margin-bottom-xs"><a href=" " class="nav-text">Public Policy</a></li>
+            <li class="margin-bottom-xs"><a href=" " class="nav-text">Stories & Ideas</a></li>
+          </ul>
+        </nav>
+        <nav class="display-inline-block margin-left-lg">
+          <ul class="">
+            <li class="margin-bottom-xs"><a href=" " class="nav-text">Job Board</a></li>
+            <li class="margin-bottom-xs"><a href=" " class="nav-text">Member Portal</a></li>
+            <li class="margin-bottom-xs"><a href=" " class="nav-text">Membership</a></li>
+            <li class="margin-bottom-xs"><a href=" " class="nav-text">FAQs</a></li>
+            <li class="margin-bottom-xs"><a href=" " class="nav-text">Contact Us</a></li>
+            <li class="margin-bottom-xs"><a href=" " class="nav-text">Mailing List</a></li>
+          </ul>
+        </nav>
+
+        <div class="display-inline-block margin-left-xl small-text">
+          <p class="margin-bottom-zero">1000 North Alameda Street, Suite 230</p>
+           <p class="margin-bottom-zero">Los Angeles, CA 90012</p>
+          <a href="tel:2136808866" class="display-block margin-bottom-zero">Tel: (213) 680‐8866</a>
+          <a href="emailto:info@thinkshout.org">info@socalgrantmakers.org</a>
+        </div>
+      </div>
+      <hr class="hr-white">
+      <p class="small-text display-inline-block">©2021 ThinkShout, All rights reserved.</p>
+      <p class="small-text display-inline-block">Privacy Policy & Terms of Use</p>
+
+    </footer>
+  </div>
+</div>
+

@@ -1,10 +1,13 @@
 /* autoprefixer grid: autoplace */
 
-/* CONFIG */
-@import "config/*";
+/* Global */
+@import "00_global/*";
 
 /* LAYOUT */
-@import "layout/*";
+@import "01_layout/*";
 
-/* COMPONENTS */
-@import "components/*/*";
+/* Content Paragraphs */
+@import "02_content-paragraphs/*";
+
+/* Content Types */
+@import "03_content/*";
