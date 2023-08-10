@@ -9,17 +9,17 @@
     "babel-loader": "^8.0.5",
     "browser-sync": "^2.26.7",
     "browser-sync-webpack-plugin": "^2.2.2",
-    "css-loader": "^2.1.1",
+    "css-loader": "^6.8.1",
     "husky": "^2.2.0",
     "mini-css-extract-plugin": "^1.0.0",
-    "node-sass": "^6.0.0",
+    "node-sass": "^8.0.0",
     "node-sass-glob-importer": "^5.3.1",
     "postcss-loader": "^3.0.0",
     "prettier": "1.17.0",
     "pretty-quick": "^1.10.0",
     "sass-loader": "^10.0.0",
-    "webpack": "^4.41.5",
-    "webpack-cli": "^3.3.10"
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4"
   },
   "scripts": {
     "build": "webpack --config webpack.config.js",
