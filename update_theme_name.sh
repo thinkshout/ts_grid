@@ -62,7 +62,7 @@
   PROJECT_NAME=$(echo $THEME_DEST | sed 's:.*/\(.*\)/web/.*:\1:g')
 
   # go through files and edit them replacing ts_grid with the new theme name
-  sed "s/ts_grid_/${THEME_NAME}_/g" $THEME_DEST/ts_grid.theme >$THEME_DEST/$THEME_NAME.theme
+  sed "s/ts_grid/${THEME_NAME}/g" $THEME_DEST/ts_grid.theme >$THEME_DEST/$THEME_NAME.theme
   rm $THEME_DEST/ts_grid.theme
 
   sed "s/name: TS Grid/name: ${NEW_HUMAN_READABLE_NAME}/g" $THEME_DEST/ts_grid.info.yml | \

@@ -41,7 +41,7 @@ function ts_grid_theme_suggestions_form_element_alter(array &$suggestions, array
 /**
  * Implements hook_page_attachments_alter().
  */
-function ts_grid_page_attachments_alter(array &$page) {
+function ts_grid_page_attachments_alter(array &$attachments) {
   // Tell IE to use latest rendering engine (not to use compatibility mode).
   /*$ie_edge = [
   '#type' => 'html_tag',
@@ -51,7 +51,12 @@ function ts_grid_page_attachments_alter(array &$page) {
   'content' => 'IE=edge',
   ],
   ];
-  $page['#attached']['html_head'][] = [$ie_edge, 'ie_edge'];*/
+  $attachments['#attached']['html_head'][] = [$ie_edge, 'ie_edge'];*/
+  // Use the dev library if we're developing locally.
+  if (in_array('ts_grid/main', $attachments['#attached']['library']) && file_exists(__DIR__ . '/dist_dev')) {
+    $index = array_search('ts_grid/main', $attachments['#attached']['library']);
+    $attachments['#attached']['library'][$index] = 'ts_grid/dev';
+  }
 }
 
 /**
@@ -162,15 +167,4 @@ function ts_grid_theme_suggestions_details_alter(array &$suggestions, array $var
  */
 function ts_grid_preprocess_menu_local_task(array &$variables) {
 
-}
-
-/**
- * Implements hook_page_attachments_alter().
- */
-function ts_grid_example_page_attachments_alter(array &$attachments) {
-  // Use the dev library if we're developing locally.
-  if (in_array('ts_grid/main', $attachments['#attached']['library']) && file_exists(__DIR__ . '/dist_dev')) {
-    $index = array_search('ts_grid/main', $attachments['#attached']['library']);
-    $attachments['#attached']['library'][$index] = 'ts_grid/dev';
-  }
 }
