@@ -38,7 +38,8 @@ module.exports = (env, argv) => {
               options: {
                 sassOptions: {
                   importer: globImporter()
-                }
+                },
+                sourceMap: true,
               }
             }
           ]
