@@ -23,8 +23,9 @@ module.exports = (env, argv) => {
               loader: "css-loader",
               options: {
                 sourceMap: true,
-                modules: false,
-                localIdentName: "[local]___[hash:base64:5]"
+                modules: {
+                  localIdentName: "[local]___[hash:base64:5]"
+                }
               }
             },
             {
@@ -36,7 +37,9 @@ module.exports = (env, argv) => {
             {
               loader: "sass-loader",
               options: {
-                importer: globImporter(),
+                sassOptions: {
+                  importer: globImporter()
+                },
                 sourceMap: true,
               }
             }
